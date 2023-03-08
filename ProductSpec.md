@@ -32,39 +32,41 @@
 
 **Required Must-have Stories**
 
-- [fill in your required user stories here]
-- ...
+- Users must be able to input their friend's rizz stats and affect the user's rizz overall.
+- Users must be able to choose their preference of gender they are attracted to.
+  - To elaborate more on this, the clientside will adjust the prompt based on what gender the user is attracted to.
 
 **Optional Nice-to-have Stories**
 
-- [fill in your required user stories here]
+- A Spotify-like wrapped weekly summary of the user's rizz stats.
 - ...
 
 ### 2. Screen Archetypes
 
-- [list first screen here]
-  - [list associated required story here]
-  - ...
-- [list second screen here]
-  - [list associated required story here]
-  - ...
+- Login Screen
+  - User can log in
+- Create Account Screen
+  - User can create a new account with initial rizz stats.
+- My Rizz Page
+  - Summary of your rizz stats.
+- Add Rizz Page
+  - A page in which you can report your friend's rizz.
+- Rizz Feed
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-- [fill out your first tab]
-- [fill out your second tab]
-- [fill out your third tab]
+- Rizz Feed
+- Add Rizz
+- My Rizz
 
 **Flow Navigation** (Screen to Screen)
 
-- [list first screen here]
-  - [list screen navigation here]
-  - ...
-- [list second screen here]
-  - [list screen navigation here]
-  - ...
+- Login Screen => Home
+- Login Screen => Create Account => Home
+- Rizz Feed => Rizz Detail Page or Modal
+- My Rizz => Settings/Logout
 
 ## Wireframes
 
@@ -80,8 +82,6 @@
 [This section will be completed in Unit 9]
 
 ### Models
-
-[Add table of models]
 
 ### Networking
 
