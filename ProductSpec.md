@@ -13,7 +13,9 @@
 
 ### Description
 
-[Description of your app]
+Inspired by the TikTok videos originating from late 2022, this app strives to quantify rizz into an overall score. This is to incentivize users to become more bold and better! 
+
+The way it works is that your friends on this app report the rizz you showcased at some special event or a night out. Based on those reported stats this app calculates your rizz overall!
 
 ### App Evaluation
 
@@ -39,7 +41,6 @@
 **Optional Nice-to-have Stories**
 
 - A Spotify-like wrapped weekly summary of the user's rizz stats.
-- ...
 
 ### 2. Screen Archetypes
 
