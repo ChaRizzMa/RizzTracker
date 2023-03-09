@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACD0113E29BA41E100025FA9 /* UserSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* UserSignUp.swift */; };
 		ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */; };
 		ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC5ABF29B7F3E100E38E48 /* SceneDelegate.swift */; };
 		ACFC5AC229B7F3E100E38E48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC5AC129B7F3E100E38E48 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ACD0113D29BA41E100025FA9 /* UserSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUp.swift; sourceTree = "<group>"; };
 		ACFC5ABA29B7F3E100E38E48 /* RizzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFC5ABF29B7F3E100E38E48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACD0113C29BA41A400025FA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACD0113D29BA41E100025FA9 /* UserSignUp.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ACFC5AB129B7F3E100E38E48 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		ACFC5ABC29B7F3E100E38E48 /* RizzTracker */ = {
 			isa = PBXGroup;
 			children = (
+				ACD0113C29BA41A400025FA9 /* Models */,
 				ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */,
 				ACFC5ABF29B7F3E100E38E48 /* SceneDelegate.swift */,
 				ACFC5AC129B7F3E100E38E48 /* ViewController.swift */,
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD0113E29BA41E100025FA9 /* UserSignUp.swift in Sources */,
 				ACFC5AC229B7F3E100E38E48 /* ViewController.swift in Sources */,
 				ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */,
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,

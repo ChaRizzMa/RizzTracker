@@ -1,6 +1,6 @@
 # Original App Design Project - README Template
 
-# Rizzometer
+# APP_NAME_HERE
 
 ## Table of Contents
 
