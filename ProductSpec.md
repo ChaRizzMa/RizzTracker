@@ -1,6 +1,6 @@
 # Original App Design Project - README Template
 
-# APP_NAME_HERE
+# ChaRizzma
 
 ## Table of Contents
 
@@ -35,12 +35,14 @@ The way it works is that your friends on this app report the rizz you showcased 
 **Required Must-have Stories**
 
 - Users must be able to input their friend's rizz stats and affect the user's rizz overall.
-- Users must be able to choose their preference of gender they are attracted to.
-  - To elaborate more on this, the clientside will adjust the prompt based on what gender the user is attracted to.
-
+- Ability to include notes when rating friends.
+- Leaderboard showing the person with the highest score.
+ 
 **Optional Nice-to-have Stories**
 
 - A Spotify-like wrapped weekly summary of the user's rizz stats.
+- Change in "rizz" per week.
+- Groups to rate your friends.
 
 ### 2. Screen Archetypes
 
