@@ -41,8 +41,9 @@ The way it works is that your friends on this app report the rizz you showcased 
 **Optional Nice-to-have Stories**
 
 - A Spotify-like wrapped weekly summary of the user's rizz stats.
-- Change in "rizz" per week.
+- Change in rizz per week.
 - Groups to rate your friends.
+- Create line graph that shows rizz over time 
 
 ### 2. Screen Archetypes
 
