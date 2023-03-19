@@ -74,8 +74,7 @@ The way it works is that your friends on this app report the rizz you showcased 
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/VincentCarrancho/RizzTracker/blob/main/rizz%20app%20low%20fidelity%20mockups.pdf" width=600>
+<img src="[YOUR_WIREFRAME_IMAGE_URL](https://github.com/VincentCarrancho/RizzTracker/blob/main/rizz%20app%20low%20fidelity%20mockups.pdf)" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
