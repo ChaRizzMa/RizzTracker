@@ -24,8 +24,8 @@ public class UserSignUp {
     private var _pronouns, _attractionPreference: String
     private var _initialRizz, _selfConfidence: Double
     
-    public init(fullname: String, emailAddress: String, phoneNumber: String, userName: String, password: String,
-                pronouns: String, attractionPreference: String, initialRizz: Double, selfConfidence: Double) {
+    public init(fullname: String = "", emailAddress: String = "", phoneNumber: String = "", userName: String = "", password: String = "",
+                pronouns: String = "", attractionPreference: String = "", initialRizz: Double = 0.0, selfConfidence: Double = 0.0) {
         _fullname = fullname
         _emailAddress = emailAddress
         _phoneNumber = phoneNumber
