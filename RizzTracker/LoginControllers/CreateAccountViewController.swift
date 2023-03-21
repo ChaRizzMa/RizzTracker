@@ -24,6 +24,18 @@ class CreateAccountViewController: UIViewController {
     }
     
 
+    
+    @IBAction func onAccountCreationNext(_ sender: Any) {
+        print((emailAddressField.text!) as String)
+        performSegue(withIdentifier: "CreateAccountSegue2", sender: Any?.self)
+    }
+    
+    // TODO: Figure out if we have to pass data thru
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CreateAccountSegue2", let nextpage = segue.destination as? CreateAccountViewController2 {
+            return
+        }
+    }
     /*
     // MARK: - Navigation
 

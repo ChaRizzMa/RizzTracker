@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ACD0113E29BA41E100025FA9 /* UserSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* UserSignUp.swift */; };
+		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
+		ACD0113E29BA41E100025FA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* User.swift */; };
 		ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114629BF7C0000025FA9 /* LoginViewController.swift */; };
 		ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */; };
 		ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */; };
@@ -18,7 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ACD0113D29BA41E100025FA9 /* UserSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUp.swift; sourceTree = "<group>"; };
+		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
+		ACD0113D29BA41E100025FA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		ACFC5ABA29B7F3E100E38E48 /* RizzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +46,7 @@
 		ACD0113C29BA41A400025FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ACD0113D29BA41E100025FA9 /* UserSignUp.swift */,
+				ACD0113D29BA41E100025FA9 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -54,6 +56,7 @@
 			children = (
 				ACD0114629BF7C0000025FA9 /* LoginViewController.swift */,
 				ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */,
+				AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */,
 			);
 			path = LoginControllers;
 			sourceTree = "<group>";
@@ -161,8 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */,
-				ACD0113E29BA41E100025FA9 /* UserSignUp.swift in Sources */,
+				ACD0113E29BA41E100025FA9 /* User.swift in Sources */,
 				ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */,
+				AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */,
 				ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */,
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,
 			);

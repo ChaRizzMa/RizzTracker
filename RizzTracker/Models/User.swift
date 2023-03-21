@@ -16,7 +16,7 @@ enum ValidationError: Error {
  TODO: Implement signup method after all the data is not empty.
  TODO: Implement a validation function to make sure none of the data is empty
  */
-public class UserSignUp {
+public class User {
     // contact information
     private var _fullname, _emailAddress, _phoneNumber, _userName, _password: String
     
@@ -87,7 +87,5 @@ public class UserSignUp {
         }
         _selfConfidence = value
     }
-    
-    
     
 }
