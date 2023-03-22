@@ -21,12 +21,12 @@ The way it works is that your friends on this app report the rizz you showcased 
 
 [Evaluation of your app across the following attributes]
 
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking/Entertainment
+- **Mobile:** This app is primarily developed for mobile as the ability to quickly quantify a friend's rizz in the moment is important.
+- **Story:** Create reports on your friends rizz and track them in a leaderboard.
+- **Market:** This is targeted mostly towards people in friend groups.
+- **Habit:** It's encouraged to use this app frequently as leaderboards amongst friends is an important feature of the app.
+- **Scope:** Primarily focused on friend groups at the moment. 
 
 ## Product Spec
 
