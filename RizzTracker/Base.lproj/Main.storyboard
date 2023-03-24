@@ -267,7 +267,7 @@
         <!--Login Navigation Controller-->
         <scene sceneID="Xrx-XR-CDG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JUR-U8-6fi" userLabel="Login Navigation Controller" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginController" automaticallyAdjustsScrollViewInsets="NO" id="JUR-U8-6fi" userLabel="Login Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jfW-5Q-stB">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -285,7 +285,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="rtv-aV-OVJ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fpQ-oN-4DV" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomepageController" automaticallyAdjustsScrollViewInsets="NO" id="fpQ-oN-4DV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QDa-AN-FYI">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

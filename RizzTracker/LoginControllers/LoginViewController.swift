@@ -15,10 +15,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var CreateAccountButton: UIButton!
     @IBOutlet weak var LoginButton: UIButton!
     
+    var testVariable = "string"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Add a checker to see if the user is logged in.
         // If the user is logged in load the rest and fetch the data.
         // Else, call the signout function to completely flush the user persistence and segue to login/signup screen
         // Do any additional setup after loading the view.
