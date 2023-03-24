@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="4653" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="bBA-lQ-Mkx">
             <objects>
-                <viewController id="dVR-bh-8la" sceneMemberID="viewController">
+                <viewController id="dVR-bh-8la" userLabel="Home View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="baQ-I6-RLJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,10 +318,10 @@
             </objects>
             <point key="canvasLocation" x="6676" y="-721"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Rizz View Controller-->
         <scene sceneID="lpV-BR-5PE">
             <objects>
-                <viewController id="kDc-IQ-ORw" sceneMemberID="viewController">
+                <viewController id="kDc-IQ-ORw" userLabel="Add Rizz View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSS-qa-bdU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="6676" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--My Rizz View Controller-->
         <scene sceneID="8WL-O5-7vZ">
             <objects>
-                <viewController id="O54-dR-aF2" sceneMemberID="viewController">
+                <viewController id="O54-dR-aF2" userLabel="My Rizz View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cjH-Nd-AHM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,11 +350,11 @@
             </objects>
             <point key="canvasLocation" x="6676" y="730"/>
         </scene>
-        <!--Item-->
+        <!--Home Navigation Controller-->
         <scene sceneID="UBj-jk-HT3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I5X-wW-JRG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ws0-9d-OnU"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I5X-wW-JRG" userLabel="Home Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="ws0-9d-OnU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Y6-DK-g9W">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -369,11 +369,11 @@
             </objects>
             <point key="canvasLocation" x="5749" y="-721"/>
         </scene>
-        <!--Item-->
+        <!--Add Rizz Navigation Controller-->
         <scene sceneID="ChN-5f-WkZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H4F-5R-lyg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FCE-WP-rPs"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H4F-5R-lyg" userLabel="Add Rizz Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Rizz" image="plus.app.fill" catalog="system" id="FCE-WP-rPs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZrP-49-80c">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -388,11 +388,11 @@
             </objects>
             <point key="canvasLocation" x="5749" y="-2"/>
         </scene>
-        <!--Item-->
+        <!--Add Rizz Navigation Controller-->
         <scene sceneID="jA5-Ca-YEk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6o4-cC-0oB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="osh-RO-aEW"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6o4-cC-0oB" userLabel="Add Rizz Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Rizz" image="person.fill" catalog="system" id="osh-RO-aEW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bo6-9S-90U">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -411,6 +411,9 @@
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="ChaRizzma_logoSVG" width="261" height="63"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
