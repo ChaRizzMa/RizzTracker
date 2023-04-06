@@ -191,55 +191,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qoY-Nu-9iu">
                                 <rect key="frame" x="16" y="303" width="373" height="323.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-zu-zKd">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="40.666666666666664"/>
+
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-kq-HK6">
+
                                         <rect key="frame" x="0.0" y="56.666666666666657" width="373" height="34"/>
+
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IA1-CN-U16">
+
                                         <rect key="frame" x="0.0" y="106.66666666666667" width="373" height="34.000000000000014"/>
+
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dL-gg-WdW">
+
                                         <rect key="frame" x="0.0" y="156.66666666666666" width="373" height="50.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much rizz do you think you have?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-EW-W9C">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="20.333333333333332"/>
+
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kae-JH-Ke7">
+
                                                 <rect key="frame" x="-2" y="20.333333333333343" width="377" height="31"/>
+
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lfa-Cv-Ftn">
+
                                         <rect key="frame" x="0.0" y="223" width="373" height="50.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How attractive do you think you are?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-BW-dXO">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="20.333333333333332"/>
+
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQy-Ek-jVI">
+
                                                 <rect key="frame" x="-2" y="20.333333333333343" width="377" height="31"/>
+
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-vd-F6S">
+
                                         <rect key="frame" x="0.0" y="289.33333333333331" width="373" height="34.333333333333314"/>
+
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
                                     </button>
@@ -248,6 +264,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LdX-YZ-z0c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qoY-Nu-9iu" firstAttribute="top" secondItem="LdX-YZ-z0c" secondAttribute="top" constant="200" id="Jwe-Lw-5Hc"/>
+                            <constraint firstItem="LdX-YZ-z0c" firstAttribute="trailing" secondItem="qoY-Nu-9iu" secondAttribute="trailing" constant="16" id="NER-5f-SYQ"/>
+                            <constraint firstItem="qoY-Nu-9iu" firstAttribute="leading" secondItem="LdX-YZ-z0c" secondAttribute="leading" constant="16" id="yKS-ZG-3tN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tLW-oG-One"/>
                     <connections>
@@ -304,6 +325,7 @@
                     <view key="view" contentMode="scaleToFill" id="baQ-I6-RLJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gOu-RX-NnA">
                                 <rect key="frame" x="16" y="119" width="361" height="634"/>
@@ -431,6 +453,7 @@
                             <constraint firstItem="CVe-jk-Vfe" firstAttribute="top" secondItem="NjB-oW-MMa" secondAttribute="top" constant="16" id="cQ4-Ce-elX"/>
                         </constraints>
                     </view>
+
                     <navigationItem key="navigationItem" id="lt6-gV-tII"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQt-BF-qxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
