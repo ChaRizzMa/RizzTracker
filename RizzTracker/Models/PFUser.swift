@@ -20,19 +20,25 @@ enum ValidationError: Error {
 
 //Created to utilize the login and signup features from ParseSwift
 struct PFUser: ParseUser {
-    
-    // ParseObject
+    // Additional properties required by the ParseUser protocol
+    var authData: [String : [String : String]?]?
+    var originalData: Data?
     var objectId: String?
     var createdAt: Date?
     var updatedAt: Date?
     var ACL: ParseACL?
-    var originalData: Data?
     
-    // These are required by `ParseUser`.
+    // Main properties linked to the user's information
     var username: String?
     var email: String?
     var emailVerified: Bool?
     var password: String?
-    var authData: [String: [String: String]?]?
     
+    // A custom property
+    
+    var firstName, lastName, phoneNumber: String?
+    var currentRizz: Float?
+    var friendsList: [String]?
+    var pronouns, attractionPreference: String?
+    var initialRizz, selfConfidence: Float?
 }
