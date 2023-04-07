@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84C6956F29E08C32000CA34B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6956E29E08C32000CA34B /* HomeViewController.swift */; };
+		84C6957129E08C97000CA34B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6957029E08C97000CA34B /* UserTableViewCell.swift */; };
 		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
 		ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACAE525C29DF985400CFF90F /* ParseSwift */; };
 		ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* PFUser.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84C6956E29E08C32000CA34B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84C6957029E08C97000CA34B /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
 		ACD0113D29BA41E100025FA9 /* PFUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFUser.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84C6956D29E08BB1000CA34B /* HomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84C6956E29E08C32000CA34B /* HomeViewController.swift */,
+				84C6957029E08C97000CA34B /* UserTableViewCell.swift */,
+			);
+			path = HomeControllers;
+			sourceTree = "<group>";
+		};
 		ACD0113C29BA41A400025FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +102,7 @@
 				ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */,
 				ACFC5ABF29B7F3E100E38E48 /* SceneDelegate.swift */,
 				ACFC5AC329B7F3E100E38E48 /* Main.storyboard */,
+				84C6956D29E08BB1000CA34B /* HomeControllers */,
 				ACD0114129BF7B8700025FA9 /* LoginControllers */,
 				ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */,
 				ACFC5AC829B7F3E300E38E48 /* LaunchScreen.storyboard */,
@@ -175,8 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */,
+				84C6957129E08C97000CA34B /* UserTableViewCell.swift in Sources */,
 				ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */,
 				ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */,
+				84C6956F29E08C32000CA34B /* HomeViewController.swift in Sources */,
 				AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */,
 				ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */,
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,
