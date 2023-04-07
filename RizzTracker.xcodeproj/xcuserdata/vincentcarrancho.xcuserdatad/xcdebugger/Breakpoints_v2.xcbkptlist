@@ -15,9 +15,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "init(fullname:emailAddress:phoneNumber:userName:password:pronouns:attractionPreference:initialRizz:selfConfidence:)"
-            landmarkType = "7">
+            endingLineNumber = "27">
             <Locations>
                <Location
                   uuid = "AC52F819-7F98-4645-9569-F12CA125587A - 828f51e40153b630"
