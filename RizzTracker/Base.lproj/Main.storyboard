@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pzi-GP-aqG">
-                                <rect key="frame" x="16" y="303" width="361" height="391"/>
+                                <rect key="frame" x="16" y="303" width="361" height="441"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywr-oo-fpU">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
@@ -119,38 +119,43 @@
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YNl-kL-3dY" userLabel="Fullname Field" customClass="Create">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1V-fq-p7G" userLabel="EmailAddress Field">
                                         <rect key="frame" x="0.0" y="56.666666666666686" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1V-fq-p7G" userLabel="EmailAddress Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNa-WN-TI3" userLabel="EmailAddress Field">
                                         <rect key="frame" x="0.0" y="106.66666666666669" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-lt-tLA" userLabel="PhoneNumber Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygK-4P-0KD" userLabel="EmailAddress Field">
                                         <rect key="frame" x="0.0" y="156.66666666666669" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-Rj-k9B" userLabel="Username Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-lt-tLA" userLabel="PhoneNumber Field">
                                         <rect key="frame" x="0.0" y="206.66666666666669" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkQ-Ff-Mj8" userLabel="Password Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-Rj-k9B" userLabel="Username Field">
                                         <rect key="frame" x="0.0" y="256.66666666666663" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0X-5Z-oUX" userLabel="ConfirmPassword Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkQ-Ff-Mj8" userLabel="Password Field">
                                         <rect key="frame" x="0.0" y="306.66666666666663" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0X-5Z-oUX" userLabel="ConfirmPassword Field">
+                                        <rect key="frame" x="0.0" y="356.66666666666663" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deT-AI-0Bb">
-                                        <rect key="frame" x="0.0" y="356.66666666666663" width="361" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="406.66666666666663" width="361" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                         <connections>
@@ -170,12 +175,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="JFf-Ri-XfM"/>
                     <connections>
-                        <outlet property="confirmPasswordField" destination="b0X-5Z-oUX" id="Q5q-Hv-4PT"/>
-                        <outlet property="emailAddressField" destination="z1V-fq-p7G" id="BFu-Fz-aQc"/>
-                        <outlet property="fullnameField" destination="z1V-fq-p7G" id="9UJ-Sb-1eo"/>
-                        <outlet property="passwordField" destination="vkQ-Ff-Mj8" id="wWv-0P-2Tv"/>
-                        <outlet property="phoneNumberField" destination="vVB-lt-tLA" id="d3s-l5-EWg"/>
-                        <outlet property="usernameField" destination="6l4-Rj-k9B" id="a2J-0D-grh"/>
+                        <outlet property="confirmpasswordField" destination="b0X-5Z-oUX" id="I7c-Dh-SoW"/>
+                        <outlet property="emailaddressField" destination="ygK-4P-0KD" id="M8f-xA-UPv"/>
+                        <outlet property="firstnameField" destination="z1V-fq-p7G" id="8dq-wp-xc8"/>
+                        <outlet property="lastnameField" destination="SNa-WN-TI3" id="7If-LH-uwZ"/>
+                        <outlet property="passwordField" destination="vkQ-Ff-Mj8" id="Pbj-ZI-ZL7"/>
+                        <outlet property="phonenumberField" destination="vVB-lt-tLA" id="Jer-hr-iXa"/>
+                        <outlet property="usernameField" destination="6l4-Rj-k9B" id="G8p-MF-aCB"/>
                         <segue destination="rL5-XV-kQZ" kind="show" identifier="CreateAccountSegue2" id="oX4-Vp-P4j"/>
                     </connections>
                 </viewController>
@@ -191,73 +197,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qoY-Nu-9iu">
-                                <rect key="frame" x="16" y="303" width="373" height="323.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qoY-Nu-9iu">
+                                <rect key="frame" x="16" y="303" width="361" height="323.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-zu-zKd">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="40.666666666666664"/>
-
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-kq-HK6">
-
-                                        <rect key="frame" x="0.0" y="56.666666666666657" width="373" height="34"/>
-
+                                        <rect key="frame" x="0.0" y="56.666666666666686" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IA1-CN-U16">
-
-                                        <rect key="frame" x="0.0" y="106.66666666666667" width="373" height="34.000000000000014"/>
-
+                                        <rect key="frame" x="0.0" y="106.66666666666669" width="361" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5dL-gg-WdW">
-
-                                        <rect key="frame" x="0.0" y="156.66666666666666" width="373" height="50.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="156.66666666666669" width="361" height="50.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much rizz do you think you have?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXj-EW-W9C">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="20.333333333333332"/>
-
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kae-JH-Ke7">
-
-                                                <rect key="frame" x="-2" y="20.333333333333343" width="377" height="31"/>
-
+                                                <rect key="frame" x="-2" y="20.333333333333314" width="365" height="31"/>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lfa-Cv-Ftn">
-
-                                        <rect key="frame" x="0.0" y="223" width="373" height="50.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="223" width="361" height="50.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How attractive do you think you are?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-BW-dXO">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="20.333333333333332"/>
-
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qQy-Ek-jVI">
-
-                                                <rect key="frame" x="-2" y="20.333333333333343" width="377" height="31"/>
-
+                                                <rect key="frame" x="-2" y="20.333333333333371" width="365" height="31"/>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-vd-F6S">
-
-                                        <rect key="frame" x="0.0" y="289.33333333333331" width="373" height="34.333333333333314"/>
-
+                                        <rect key="frame" x="0.0" y="289.33333333333337" width="361" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
+                                        <connections>
+                                            <action selector="onCreateAccount:" destination="rL5-XV-kQZ" eventType="touchDown" id="nXg-OK-xl7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -325,7 +318,6 @@
                     <view key="view" contentMode="scaleToFill" id="baQ-I6-RLJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gOu-RX-NnA">
                                 <rect key="frame" x="16" y="119" width="361" height="634"/>
@@ -453,7 +445,6 @@
                             <constraint firstItem="CVe-jk-Vfe" firstAttribute="top" secondItem="NjB-oW-MMa" secondAttribute="top" constant="16" id="cQ4-Ce-elX"/>
                         </constraints>
                     </view>
-
                     <navigationItem key="navigationItem" id="lt6-gV-tII"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQt-BF-qxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
