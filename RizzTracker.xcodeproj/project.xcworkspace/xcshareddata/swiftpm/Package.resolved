@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "parse-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/netreconlab/Parse-Swift.git",
+      "state" : {
+        "revision" : "088e42071dcebae970e5d94e3d7d0f34cf300f02",
+        "version" : "5.4.1"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 class LoginViewController: UIViewController {
     
@@ -33,6 +34,9 @@ class LoginViewController: UIViewController {
         // if correct credentials login:
         // performSegue(withIdentifier: "Homepage", sender: sender)
         // else: perform error handling
+        
+//        User.login(password: <#T##String#>, completion: <#T##(Result<User, ParseError>) -> Void#>)
+        
     }
     
     @IBAction func onCreateAccountButtonTap(_ sender: Any) {
