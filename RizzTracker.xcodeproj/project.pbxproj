@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
 		ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACAE525C29DF985400CFF90F /* ParseSwift */; };
-		ACD0113E29BA41E100025FA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* User.swift */; };
+		ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* PFUser.swift */; };
 		ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114629BF7C0000025FA9 /* LoginViewController.swift */; };
 		ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */; };
 		ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */; };
@@ -17,11 +17,12 @@
 		ACFC5AC529B7F3E100E38E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC329B7F3E100E38E48 /* Main.storyboard */; };
 		ACFC5AC729B7F3E300E38E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */; };
 		ACFC5ACA29B7F3E300E38E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC829B7F3E300E38E48 /* LaunchScreen.storyboard */; };
+		E17A128429DFB7600057959D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A128329DFB7600057959D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
-		ACD0113D29BA41E100025FA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ACD0113D29BA41E100025FA9 /* PFUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFUser.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		ACFC5ABA29B7F3E100E38E48 /* RizzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +32,7 @@
 		ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACFC5AC929B7F3E300E38E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACFC5ACB29B7F3E300E38E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17A128329DFB7600057959D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,8 @@
 		ACD0113C29BA41A400025FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ACD0113D29BA41E100025FA9 /* User.swift */,
+				ACD0113D29BA41E100025FA9 /* PFUser.swift */,
+				E17A128329DFB7600057959D /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,11 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */,
-				ACD0113E29BA41E100025FA9 /* User.swift in Sources */,
+				ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */,
 				ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */,
 				AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */,
 				ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */,
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,
+				E17A128429DFB7600057959D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
