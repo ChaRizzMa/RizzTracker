@@ -75,23 +75,53 @@ class CreateAccountViewController2: UIViewController {
         // print(selfRizz, selfAttraction, pronouns, attractionpreference)
         
         // call create User
-        
-        
+        createUser()
     }
     
     func createUser() {
-        var user = PFUser(username: username, email: email, password: password)
-        user.firstName = fn
-        user.lastName = ln
-        user.phoneNumber = pn
-        user.currentRizz = 0.0 // TODO: Change this to the formula
-        user.friendsList = []
-        user.pronouns = pronouns
-        user.attractionPreference = attractionpreference
-        user.initialRizz = selfRizz
-        user.selfConfidence = selfAttraction
+        var newUser = PFUser(username: username, email: email, password: password)
+        newUser.firstName = fn
+        newUser.lastName = ln
+        newUser.phoneNumber = pn
+        newUser.currentRizz = 0.0 // TODO: Change this to the formula
+        newUser.friendsList = []
+        newUser.pronouns = pronouns
+        newUser.attractionPreference = attractionpreference
+        newUser.initialRizz = selfRizz
+        newUser.selfConfidence = selfAttraction
         
-        // SIGN UP USER
+    
+        newUser.signup { [weak self] result in
+
+            switch result {
+            case .success(let user):
+
+                print("✅ Successfully signed up user \(user)")
+
+                // Post a notification that the user has successfully signed up.
+                NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
+
+            case .failure(let error):
+                // Failed sign up
+                print(error.message)
+                self?.showAlert(description: error.message)
+            }
+        }
+        
+    }
+    
+    private func showAlert(description: String?) {
+            let alertController = UIAlertController(title: "Unable to Sign Up", message: description ?? "Unknown error", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(action)
+            present(alertController, animated: true)
+        }
+
+    private func showMissingFieldsAlert() {
+        let alertController = UIAlertController(title: "Opps...", message: "We need all fields filled out in order to sign you up.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        present(alertController, animated: true)
     }
     
 }
