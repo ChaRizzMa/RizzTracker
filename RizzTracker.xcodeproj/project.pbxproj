@@ -10,6 +10,7 @@
 		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
 		ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACAE525C29DF985400CFF90F /* ParseSwift */; };
 		ACCD953F29E227540067980D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD953E29E227540067980D /* Math.swift */; };
+		ACCD954329E22B930067980D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = ACCD954229E22B930067980D /* Fakery */; };
 		ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* PFUser.swift */; };
 		ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114629BF7C0000025FA9 /* LoginViewController.swift */; };
 		ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
 		ACCD953E29E227540067980D /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		ACCD954029E22B360067980D /* GenerateUsers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenerateUsers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACD0113D29BA41E100025FA9 /* PFUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFUser.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCD954329E22B930067980D /* Fakery in Frameworks */,
 				ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		ACFC5AB129B7F3E100E38E48 = {
 			isa = PBXGroup;
 			children = (
+				ACCD954029E22B360067980D /* GenerateUsers.playground */,
 				ACFC5ABC29B7F3E100E38E48 /* RizzTracker */,
 				ACFC5ABB29B7F3E100E38E48 /* Products */,
 			);
@@ -118,6 +122,7 @@
 			name = RizzTracker;
 			packageProductDependencies = (
 				ACAE525C29DF985400CFF90F /* ParseSwift */,
+				ACCD954229E22B930067980D /* Fakery */,
 			);
 			productName = RizzTracker;
 			productReference = ACFC5ABA29B7F3E100E38E48 /* RizzTracker.app */;
@@ -149,6 +154,7 @@
 			mainGroup = ACFC5AB129B7F3E100E38E48;
 			packageReferences = (
 				ACAE525B29DF985400CFF90F /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				ACCD954129E22B930067980D /* XCRemoteSwiftPackageReference "Fakery" */,
 			);
 			productRefGroup = ACFC5ABB29B7F3E100E38E48 /* Products */;
 			projectDirPath = "";
@@ -410,6 +416,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		ACCD954129E22B930067980D /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -417,6 +431,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ACAE525B29DF985400CFF90F /* XCRemoteSwiftPackageReference "Parse-Swift" */;
 			productName = ParseSwift;
+		};
+		ACCD954229E22B930067980D /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACCD954129E22B930067980D /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
