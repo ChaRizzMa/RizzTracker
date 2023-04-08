@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
 		ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACAE525C29DF985400CFF90F /* ParseSwift */; };
+		ACCD953F29E227540067980D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD953E29E227540067980D /* Math.swift */; };
 		ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* PFUser.swift */; };
 		ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114629BF7C0000025FA9 /* LoginViewController.swift */; };
 		ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
+		ACCD953E29E227540067980D /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		ACD0113D29BA41E100025FA9 /* PFUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFUser.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				ACD0113D29BA41E100025FA9 /* PFUser.swift */,
 				E17A128329DFB7600057959D /* User.swift */,
+				ACCD953E29E227540067980D /* Math.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */,
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,
 				E17A128429DFB7600057959D /* User.swift in Sources */,
+				ACCD953F29E227540067980D /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
