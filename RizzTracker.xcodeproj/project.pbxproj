@@ -23,6 +23,7 @@
 		ACFC5AC729B7F3E300E38E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */; };
 		ACFC5ACA29B7F3E300E38E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC829B7F3E300E38E48 /* LaunchScreen.storyboard */; };
 		E17A128429DFB7600057959D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A128329DFB7600057959D /* User.swift */; };
+		E17A128729E363FC0057959D /* MyRizzCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A128629E363FC0057959D /* MyRizzCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		ACFC5AC929B7F3E300E38E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACFC5ACB29B7F3E300E38E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17A128329DFB7600057959D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E17A128629E363FC0057959D /* MyRizzCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRizzCellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		ACFC5ABC29B7F3E100E38E48 /* RizzTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E17A128529E363860057959D /* Rizz */,
 				ACD0113C29BA41A400025FA9 /* Models */,
 				ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */,
 				ACFC5ABF29B7F3E100E38E48 /* SceneDelegate.swift */,
@@ -110,6 +113,14 @@
 				ACCD954929E35F120067980D /* AddRizzViewController.swift */,
 			);
 			path = RizzTracker;
+			sourceTree = "<group>";
+		};
+		E17A128529E363860057959D /* Rizz */ = {
+			isa = PBXGroup;
+			children = (
+				E17A128629E363FC0057959D /* MyRizzCellViewController.swift */,
+			);
+			path = Rizz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				ACCD954A29E35F120067980D /* AddRizzViewController.swift in Sources */,
 				ACCD954529E237100067980D /* Rizzsults.swift in Sources */,
 				ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */,
+				E17A128729E363FC0057959D /* MyRizzCellViewController.swift in Sources */,
 				ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */,
 				AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */,
 				ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */,

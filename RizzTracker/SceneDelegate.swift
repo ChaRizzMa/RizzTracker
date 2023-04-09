@@ -8,7 +8,14 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    private enum Constants {
+        static let loginViewControllerIdentifier = "LoginViewController"
+        static let homepageControllerIdentifier = "HomepageController"
+        static let storyboardIdentifier = "Main"
+    }
+    
+    
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -21,9 +28,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let isLoggedin = false // TODO: Check if logged!
         
+        NotificationCenter.default.addObserver(forName: Notification.Name("login"), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.login()
+        }
+
+        NotificationCenter.default.addObserver(forName: Notification.Name("logout"), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.logOut()
+        }
+        
         Task {
             do {
-                // user logged in
+                // if user logged in
                 let user = try await PFUser.current()
                 if user != nil {
                     let mainTabBarController = storyboard.instantiateViewController(identifier: "HomepageController")
@@ -31,28 +46,47 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     print(user)
                 } else {
                     let loginViewController = storyboard.instantiateViewController(identifier: "LoginController")
-                    loginViewController
                     window?.rootViewController = loginViewController
-                    
+
                 }
             } catch let error {
                 print("An error occurred: \(error)")
             }
         }
         
-//        if isLoggedin {
-//            // Fetch the data from the database and inject it into the view
-//            let mainTabBarController = storyboard.instantiateViewController(identifier: "HomepageController")
-//            window?.rootViewController = mainTabBarController
-//        } else {
-//            // change to login
-//            let loginViewController = storyboard.instantiateViewController(identifier: "LoginController")
-//            loginViewController
-//            window?.rootViewController = loginViewController
-//        }
+    }
+    
+    private func login() {
+        let storyboard = UIStoryboard(name: Constants.storyboardIdentifier, bundle: nil)
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.homepageControllerIdentifier)
+    }
+    
+    private func logOut() {
+        // TODO: Pt 2 - Log out Parse user.
         
-        
-        
+        // This will also remove the session from the Keychain, log out of linked services and all future calls to current will return nil.
+        PFUser.logout { [weak self] result in
+
+            switch result {
+            case .success:
+
+                // Make sure UI updates are done on main thread when initiated from background thread.
+                DispatchQueue.main.async {
+
+                    // Instantiate the storyboard that contains the view controller you want to go to (i.e. destination view controller).
+                    let storyboard = UIStoryboard(name: Constants.storyboardIdentifier, bundle: nil)
+
+                    // Instantiate the destination view controller (in our case it's a navigation controller) from the storyboard.
+                    let viewController = storyboard.instantiateViewController(withIdentifier: Constants.loginViewControllerIdentifier)
+
+                    // Programmatically set the current displayed view controller.
+                    self?.window?.rootViewController = viewController
+                }
+            case .failure(let error):
+                print("❌ Log out error: \(error)")
+            }
+        }
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
