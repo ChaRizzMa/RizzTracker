@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
      TODO: Add segue to on login button tap if the username and password are correct
      */
     @IBAction func onLoginButtonTap(_ sender: Any) {
-        print((UsernameField.text!) as String)
         // if correct credentials login:
         // performSegue(withIdentifier: "Homepage", sender: sender)
         // else: perform error handling
@@ -48,8 +47,8 @@ class LoginViewController: UIViewController {
         PFUser.login(username: username, password: password) { [weak self] result in
 
             switch result {
-            case .success(let user):
-                print("✅ Successfully logged in as user: \(user)")
+            case .success(let PFUser):
+                print("✅ Successfully logged in as user: \(String(describing: PFUser.username))")
 
                 // Post a notification that the user has successfully logged in.
                 NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
