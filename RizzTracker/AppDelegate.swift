@@ -11,13 +11,14 @@ import ParseSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) async -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        do {
-            try await ParseSwift.initialize(applicationId: "Y32c4ltK4bXQum9JAhtF4lNmiWv8Qy6jGTxbpelq", clientKey: "R0ylHbxfi8YdxyhL1eSIJCsnncaVi1giXcSvDWwI", serverURL: URL(string: "https://parseapi.back4app.com")!)
-        } catch let error {
-            debugPrint(error)
+        Task {
+            do {
+                let _ = try await ParseSwift.initialize(applicationId: "Y32c4ltK4bXQum9JAhtF4lNmiWv8Qy6jGTxbpelq", clientKey: "R0ylHbxfi8YdxyhL1eSIJCsnncaVi1giXcSvDWwI", serverURL: URL(string: "https://parseapi.back4app.com")!)
+            } catch let error {
+                print(error)
+            }
         }
         
         return true

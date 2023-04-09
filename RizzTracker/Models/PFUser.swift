@@ -19,7 +19,7 @@ enum ValidationError: Error {
  */
 
 //Created to utilize the login and signup features from ParseSwift
-struct PFUser: ParseUser {
+struct PFUser: ParseUser, CustomStringConvertible {
     // Additional properties required by the ParseUser protocol
     var authData: [String : [String : String]?]?
     var originalData: Data?
@@ -41,4 +41,22 @@ struct PFUser: ParseUser {
     var friendsList: [String]?
     var pronouns, attractionPreference: String?
     var initialRizz, selfConfidence: Float?
+    
+    // To string method
+    var description: String {
+        return "User:" +
+        "\n\tobjectId: \(objectId ?? "")" +
+        "\n\tusername: \(username ?? "")" +
+        "\n\temail: \(email ?? "")" +
+        "\n\temailVerified: \(emailVerified ?? false)" +
+        "\n\tfirstName: \(firstName ?? "")" +
+        "\n\tlastName: \(lastName ?? "")" +
+        "\n\tphoneNumber: \(phoneNumber ?? "")" +
+        "\n\tcurrentRizz: \(currentRizz ?? 0.0)" +
+        "\n\tfriendsList: \(friendsList ?? [])" +
+        "\n\tpronouns: \(pronouns ?? "")" +
+        "\n\tattractionPreference: \(attractionPreference ?? "")" +
+        "\n\tinitialRizz: \(initialRizz ?? 0.0)" +
+        "\n\tselfConfidence: \(selfConfidence ?? 0.0)"
+    }
 }
