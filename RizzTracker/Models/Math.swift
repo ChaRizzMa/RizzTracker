@@ -10,7 +10,7 @@ import Foundation
 struct Calculation {
     
     static func calculateInitialRizz(selfRizz: Float, selfPerception: Float) -> Float {
-        return 0.2 + 0.06 * ((selfRizz/2) + (selfPerception/2))
+        return (0.2 + 0.06 * ((selfRizz/2) + (selfPerception/2))) * 100
     }
     
     // TODO: Refine this formula
