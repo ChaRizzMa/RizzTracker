@@ -332,10 +332,10 @@
             </objects>
             <point key="canvasLocation" x="1068" y="-2"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Homepage Controller-->
         <scene sceneID="rtv-aV-OVJ">
             <objects>
-                <tabBarController storyboardIdentifier="HomepageController" automaticallyAdjustsScrollViewInsets="NO" id="fpQ-oN-4DV" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomepageController" automaticallyAdjustsScrollViewInsets="NO" id="fpQ-oN-4DV" customClass="HomepageController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QDa-AN-FYI">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -350,7 +350,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKN-tf-rek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4653" y="-2"/>
+            <point key="canvasLocation" x="4691" y="-2"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="bBA-lQ-Mkx">
@@ -495,14 +495,26 @@
         <!--My Rizz View Controller-->
         <scene sceneID="8WL-O5-7vZ">
             <objects>
-                <viewController id="O54-dR-aF2" userLabel="My Rizz View Controller" sceneMemberID="viewController">
+                <viewController id="O54-dR-aF2" userLabel="My Rizz View Controller" customClass="MyRizzCellViewController" customModule="RizzTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cjH-Nd-AHM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="aXX-5U-Eb7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tWc-ce-hCv"/>
+                    <navigationItem key="navigationItem" id="tWc-ce-hCv">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="C07-hf-Gv5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lae-N7-pMm">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onLogOutTapped:" destination="O54-dR-aF2" eventType="touchUpInside" id="ibC-47-fNa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfz-o9-DWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
