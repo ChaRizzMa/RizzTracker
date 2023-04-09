@@ -83,6 +83,10 @@ class AddRizzViewController: UIViewController {
                     assertionFailure("Error saving: \(error)")
                 }
         }
+        
+        // append this object ID into the rizzults array in teh database
+        
+        // after submit, reset page or
     }
     
     
