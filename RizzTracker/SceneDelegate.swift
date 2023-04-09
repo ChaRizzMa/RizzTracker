@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private enum Constants {
-        static let loginViewControllerIdentifier = "LoginViewController"
+        static let loginViewControllerIdentifier = "LoginController"
         static let homepageControllerIdentifier = "HomepageController"
         static let storyboardIdentifier = "Main"
     }
@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let isLoggedin = false // TODO: Check if logged!
+        //let isLoggedin = false // TODO: Check if logged!
         
         NotificationCenter.default.addObserver(forName: Notification.Name("login"), object: nil, queue: OperationQueue.main) { [weak self] _ in
             self?.login()
@@ -69,7 +69,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             switch result {
             case .success:
-
+                print("✅ Successfully logged out user")
                 // Make sure UI updates are done on main thread when initiated from background thread.
                 DispatchQueue.main.async {
 
