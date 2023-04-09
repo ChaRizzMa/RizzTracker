@@ -21,16 +21,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let isLoggedin = false // TODO: Check if logged!
         
-        if isLoggedin {
-            // Fetch the data from the database and inject it into the view
-            let mainTabBarController = storyboard.instantiateViewController(identifier: "HomepageController")
-            window?.rootViewController = mainTabBarController
-        } else {
-            // change to login
-            let loginViewController = storyboard.instantiateViewController(identifier: "LoginController")
-            loginViewController
-            window?.rootViewController = loginViewController
+        Task {
+            do {
+                // user logged in
+                let user = try await PFUser.current()
+                if user != nil {
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "HomepageController")
+                    window?.rootViewController = mainTabBarController
+                    print(user)
+                } else {
+                    let loginViewController = storyboard.instantiateViewController(identifier: "LoginController")
+                    loginViewController
+                    window?.rootViewController = loginViewController
+                    
+                }
+            } catch let error {
+                print("An error occurred: \(error)")
+            }
         }
+        
+//        if isLoggedin {
+//            // Fetch the data from the database and inject it into the view
+//            let mainTabBarController = storyboard.instantiateViewController(identifier: "HomepageController")
+//            window?.rootViewController = mainTabBarController
+//        } else {
+//            // change to login
+//            let loginViewController = storyboard.instantiateViewController(identifier: "LoginController")
+//            loginViewController
+//            window?.rootViewController = loginViewController
+//        }
+        
+        
         
     }
 
