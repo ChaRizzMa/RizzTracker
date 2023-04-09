@@ -41,6 +41,7 @@ struct PFUser: ParseUser, CustomStringConvertible {
     var friendsList: [String]?
     var pronouns, attractionPreference: String?
     var initialRizz, selfConfidence: Float?
+    var rizzReports: [String]? // [objectID, objectID, ...]
     
     // To string method
     var description: String {
