@@ -11,35 +11,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    // add ui table view source to class
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        //return #number of users api call
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        // Get a cell with identifier, "TrackCell"
-//        // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
-////        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserTableViewCell
-////
-////        // Get the track that corresponds to the table view row
-////        let track = tracks[indexPath.row]
-////
-////        // Configure the cell with it's associated track
-////        cell.configure(with: track)
-////
-////        // return the cell for display in the table view
-////        return cell
-//
-//
-//    }
-    
-//    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.dataSource = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -56,3 +32,17 @@ class HomeViewController: UIViewController {
     */
 
 }
+extension HomeViewController: UITableViewDelegate {}
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10;
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! UserTableViewCell
+        cell.overallNameLabel.text = "99"
+        cell.userNameLabel.text = "Giancarlo"
+        return cell
+    }
+}
+
