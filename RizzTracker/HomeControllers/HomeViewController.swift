@@ -40,13 +40,13 @@ extension HomeViewController: UITableViewDelegate {}
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rizzults?.count ?? 10;
+        return 20// change to 100 rizzults?.count ?? 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! UserTableViewCell
         var index = indexPath.item
-        cell.overallNameLabel.text = String(Int.random(in: 45...93))
+        cell.overallNameLabel.text = String( rizzults![index].owner ?? String(Int.random(in: 45...93)))
         cell.userNameLabel.text = String(rizzults![index].owner ?? "")
         return cell
     }

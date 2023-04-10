@@ -6,7 +6,7 @@ import ParseSwift
 
 Task {
     do {
-        let _ = try await ParseSwift.initialize(applicationId: "Y32c4ltK4bXQum9JAhtF4lNmiWv8Qy6jGTxbpelq", clientKey: "R0ylHbxfi8YdxyhL1eSIJCsnncaVi1giXcSvDWwI", serverURL: URL(string: "https://parseapi.back4app.com")!)
+        let _ = try await ParseSwift.initialize(applicationId: "fvd5uPi58NSeAiXJi9ZXjtaCq77CYqIRfj4eDapt", clientKey: "rep9DUSg8XCMVnCS7bygCK7e5DrILJGlHGP2aS1e", serverURL: URL(string: "https://parseapi.back4app.com")!)
     } catch let error {
         print(error)
     }

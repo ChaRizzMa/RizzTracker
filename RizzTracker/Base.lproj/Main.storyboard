@@ -372,7 +372,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-RJ-RFT">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="100.33333333333334" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="100.33333333333333" height="20.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-7O-IVt">
                                                             <rect key="frame" x="0.0" y="0.33333333333333393" width="20.333333333333332" height="20.333333333333329"/>
@@ -530,6 +530,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HVR-kf-sKR"/>
+                    <connections>
+                        <outlet property="commsGottenLabel" destination="TfX-PD-2Ub" id="0Ys-rj-DaZ"/>
+                        <outlet property="damnBadLabel" destination="MRi-tL-uks" id="v4b-71-wFM"/>
+                        <outlet property="goingToTalkLabel" destination="Hqu-Jq-46P" id="pJK-7y-Kjb"/>
+                        <outlet property="notesLabel" destination="u4r-RM-1Gj" id="4fK-oY-Iml"/>
+                        <outlet property="numberTalkedToLabel" destination="fA4-ts-oe6" id="KV1-eP-xiL"/>
+                        <outlet property="wantMeFrLabel" destination="cBO-sW-847" id="ujN-X0-cgH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3KT-xq-74O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
