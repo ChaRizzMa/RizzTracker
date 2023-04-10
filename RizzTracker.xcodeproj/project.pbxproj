@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65D0BA7129E3A426007DA8E0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0BA7029E3A426007DA8E0 /* DetailViewController.swift */; };
 		84C6956F29E08C32000CA34B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6956E29E08C32000CA34B /* HomeViewController.swift */; };
 		84C6957129E08C97000CA34B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6957029E08C97000CA34B /* UserTableViewCell.swift */; };
 		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65D0BA7029E3A426007DA8E0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		84C6956E29E08C32000CA34B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84C6957029E08C97000CA34B /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65D0BA6F29E3A3C7007DA8E0 /* DetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65D0BA7029E3A426007DA8E0 /* DetailViewController.swift */,
+			);
+			path = DetailControllers;
+			sourceTree = "<group>";
+		};
 		84C6956D29E08BB1000CA34B /* HomeControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		ACFC5ABC29B7F3E100E38E48 /* RizzTracker */ = {
 			isa = PBXGroup;
 			children = (
+				65D0BA6F29E3A3C7007DA8E0 /* DetailControllers */,
 				E17A128529E363860057959D /* Rizz */,
 				ACD0113C29BA41A400025FA9 /* Models */,
 				ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */,
@@ -231,6 +242,7 @@
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,
 				E17A128429DFB7600057959D /* User.swift in Sources */,
 				ACCD953F29E227540067980D /* Math.swift in Sources */,
+				65D0BA7129E3A426007DA8E0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
