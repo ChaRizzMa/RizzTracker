@@ -326,40 +326,31 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eId-O2-3Ef">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="634"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" spacing="16" id="S5n-pR-pNh">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333336"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </stackView>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="JCs-Z7-s51" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="70.333333333333343" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JCs-Z7-s51" id="vu5-RQ-iMC">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="S5n-pR-pNh">
-                                                            <rect key="frame" x="20" y="11" width="150" height="20.333333333333332"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Rizz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FP-DQ-3Sw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwF-4b-k5M">
-                                                                    <rect key="frame" x="105.66666666666667" y="0.0" width="44.333333333333329" height="20.333333333333332"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rizzults" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynp-tu-JUb">
+                                                            <rect key="frame" x="150" y="11" width="60" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" name="AccentColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="AccentColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="overallNameLabel" destination="4FP-DQ-3Sw" id="msH-U0-VKa"/>
-                                                    <outlet property="userNameLabel" destination="NwF-4b-k5M" id="cDT-e7-nfp"/>
-                                                </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="cQ8-aN-mNG" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="93.666667938232422" width="361" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="114.00000127156576" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cQ8-aN-mNG" id="q3k-Jx-4pM">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
@@ -390,7 +381,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="ZHO-3n-VHY" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="137.33333587646484" width="361" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="157.66666920979819" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZHO-3n-VHY" id="v8Q-f7-eAA">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
@@ -421,7 +412,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="zkN-3Z-n12" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="181.00000381469727" width="361" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="201.33333714803061" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zkN-3Z-n12" id="2f3-gl-tZx">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
@@ -452,7 +443,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="8sZ-35-Oe8" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="224.66667175292969" width="361" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="245.00000508626306" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8sZ-35-Oe8" id="1ia-Yg-pAf">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
@@ -483,7 +474,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="wul-jF-O3Q" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="268.33333969116211" width="361" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="288.66667302449542" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wul-jF-O3Q" id="168-za-xnx">
                                                     <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
