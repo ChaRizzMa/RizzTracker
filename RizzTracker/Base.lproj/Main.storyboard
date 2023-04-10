@@ -397,7 +397,6 @@
                                         <connections>
                                             <outlet property="overallNameLabel" destination="mL5-7O-IVt" id="Xex-hF-JWF"/>
                                             <outlet property="userNameLabel" destination="vsq-VH-62R" id="Ibd-Wo-aYv"/>
-                                            <segue destination="Pwu-jU-O02" kind="push" id="eth-dL-4aF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -415,6 +414,7 @@
                     <navigationItem key="navigationItem" title="Rizzults" id="9i8-8f-6oG"/>
                     <connections>
                         <outlet property="tableView" destination="eId-O2-3Ef" id="Nkb-CX-isf"/>
+                        <segue destination="Pwu-jU-O02" kind="show" identifier="DetailViewSegue" id="edv-H0-TEj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQ5-bK-eRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

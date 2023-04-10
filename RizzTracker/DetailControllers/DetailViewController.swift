@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var rizzult: Rizzults?
+    var rizzult: Rizzults!
     var user: PFUser?
     
     @IBOutlet weak var damnBadLabel: UILabel!
@@ -47,24 +47,12 @@ class DetailViewController: UIViewController {
             commsGottenLabel.text = "No Data"
             notesLabel.text = "No Data"
         } else {
-            damnBadLabel.text = "\(String(describing: rizzult?.badsQuantity))x Damn \(pronoun1) bad"
-            wantMeFrLabel.text = "\(String(describing: rizzult?.wantMeFrFRQuantity))x Damn \(pronoun1) bad"
-            goingToTalkLabel.text = "\(String(describing: rizzult?.goingToTalkToQuantity))x Damn \(pronoun1) bad"
-            numberTalkedToLabel.text = "\(String(describing: rizzult?.howManyTalkedTo))x Damn \(pronoun1) bad"
-            commsGottenLabel.text = "\(String(describing: rizzult?.numberComunications))x Damn \(pronoun1) bad"
-            notesLabel.text = "\(String(describing: rizzult?.descriptionOfSituation))"
+            damnBadLabel.text = "\(rizzult.badsQuantity ?? -1)x Damn \(pronoun1) bad"
+            wantMeFrLabel.text = "\(rizzult.wantMeFrFRQuantity ?? -1)x \(pronoun1) want me frfr"
+            goingToTalkLabel.text = "\(rizzult.goingToTalkToQuantity ?? -1)x I'm going to talk to \(pronoun2)"
+            numberTalkedToLabel.text = "\(rizzult?.howManyTalkedTo ?? -1)x \(pronoun3) talked to"
+            commsGottenLabel.text = "\(rizzult?.numberComunications ?? -1)x numbers gotten (including Instagram, WhatsApp, Snapchat, etc)"
+            notesLabel.text = "\(rizzult.descriptionOfSituation ?? "No Data")"
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
