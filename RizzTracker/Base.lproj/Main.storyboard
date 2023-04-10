@@ -364,11 +364,11 @@
                                 <rect key="frame" x="16" y="119" width="361" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="wul-jF-O3Q" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TableViewCell" id="wul-jF-O3Q" customClass="UserTableViewCell" customModule="RizzTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="42.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wul-jF-O3Q" id="168-za-xnx">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="42.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="42.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-RJ-RFT">
@@ -397,6 +397,7 @@
                                         <connections>
                                             <outlet property="overallNameLabel" destination="mL5-7O-IVt" id="Xex-hF-JWF"/>
                                             <outlet property="userNameLabel" destination="vsq-VH-62R" id="Ibd-Wo-aYv"/>
+                                            <segue destination="Pwu-jU-O02" kind="push" id="eth-dL-4aF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -420,6 +421,119 @@
                 <tapGestureRecognizer id="Ins-Eu-PUz" userLabel="Submit Tap Gesture Recognizer"/>
             </objects>
             <point key="canvasLocation" x="6675.5725190839694" y="-721.12676056338034"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xRT-Nv-An6">
+            <objects>
+                <viewController id="Pwu-jU-O02" customClass="DetailViewController" customModule="RizzTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wpw-kR-usi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats for the day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtZ-UU-w5n">
+                                <rect key="frame" x="16" y="119" width="175" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EgF-Z9-4MG">
+                                <rect key="frame" x="20" y="157" width="207.66666666666666" height="221.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12x &quot;damn she bad&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-tL-uks">
+                                        <rect key="frame" x="0.0" y="0.0" width="207.66666666666666" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12x &quot;She want me fr fr&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBO-sW-847">
+                                        <rect key="frame" x="0.0" y="50.333333333333343" width="207.66666666666666" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7x &quot;I'm going to talk to her&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqu-Jq-46P">
+                                        <rect key="frame" x="0.0" y="100.66666666666669" width="207.66666666666666" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1x Woman talked to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA4-ts-oe6">
+                                        <rect key="frame" x="0.0" y="151" width="207.66666666666666" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x Numbers gotten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-PD-2Ub">
+                                        <rect key="frame" x="0.0" y="201.33333333333331" width="207.66666666666666" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR5-BM-qKY">
+                                <rect key="frame" x="16" y="386.66666666666669" width="74.333333333333329" height="34.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4r-RM-1Gj">
+                                <rect key="frame" x="16" y="429.33333333333331" width="361" height="81.333333333333314"/>
+                                <string key="text">In the 1x woman talked, @vinsonte23 went up to a girl during a aprty with the intention to ask for her number. However when he did walk up to her this is what he said:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;hello c-c-can (gibbersih/stammering for 3 seconds). Never-mind!&quot; Then he ran away🤦. He literally ran" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rV-gM-tXa">
+                                <rect key="frame" x="16" y="526.66666666666663" width="361" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤣 L RIZZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2va-kT-qn7">
+                                <rect key="frame" x="129.33333333333337" y="603.66666666666663" width="134.66666666666663" height="38.333333333333371"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But it's okay!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEy-1E-nj8">
+                                <rect key="frame" x="147.66666666666666" y="650" width="98" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kY7-Fd-6Vd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3rV-gM-tXa" firstAttribute="top" secondItem="u4r-RM-1Gj" secondAttribute="bottom" constant="16" id="7SS-ml-FcD"/>
+                            <constraint firstItem="MEy-1E-nj8" firstAttribute="top" secondItem="2va-kT-qn7" secondAttribute="bottom" constant="8" id="DYH-Vx-ehR"/>
+                            <constraint firstItem="u4r-RM-1Gj" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="16" id="EnV-CY-CGF"/>
+                            <constraint firstItem="iR5-BM-qKY" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="16" id="Eyn-e8-ouW"/>
+                            <constraint firstItem="3rV-gM-tXa" firstAttribute="top" secondItem="u4r-RM-1Gj" secondAttribute="bottom" constant="16" id="KHp-o3-Qtx"/>
+                            <constraint firstItem="EgF-Z9-4MG" firstAttribute="top" secondItem="xtZ-UU-w5n" secondAttribute="bottom" constant="8" id="MgX-Kp-NLw"/>
+                            <constraint firstAttribute="trailing" secondItem="3rV-gM-tXa" secondAttribute="trailing" constant="16" id="Nds-Ws-MKo"/>
+                            <constraint firstItem="3rV-gM-tXa" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="16" id="Rdo-Kw-Iv4"/>
+                            <constraint firstItem="2va-kT-qn7" firstAttribute="centerX" secondItem="Wpw-kR-usi" secondAttribute="centerX" id="cGo-TO-FyJ"/>
+                            <constraint firstItem="3rV-gM-tXa" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="16" id="eYb-4T-nBE"/>
+                            <constraint firstItem="MEy-1E-nj8" firstAttribute="centerX" secondItem="Wpw-kR-usi" secondAttribute="centerX" id="f53-5s-3tW"/>
+                            <constraint firstItem="xtZ-UU-w5n" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="16" id="gHv-pd-R0J"/>
+                            <constraint firstItem="3rV-gM-tXa" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="16" id="iTA-QV-2ih"/>
+                            <constraint firstItem="2va-kT-qn7" firstAttribute="top" secondItem="3rV-gM-tXa" secondAttribute="bottom" constant="16" id="jWH-Je-tTV"/>
+                            <constraint firstAttribute="trailing" secondItem="u4r-RM-1Gj" secondAttribute="trailing" constant="16" id="piu-Yn-Qo8"/>
+                            <constraint firstItem="iR5-BM-qKY" firstAttribute="top" secondItem="EgF-Z9-4MG" secondAttribute="bottom" constant="8" id="poh-Km-fVC"/>
+                            <constraint firstItem="xtZ-UU-w5n" firstAttribute="top" secondItem="kY7-Fd-6Vd" secondAttribute="top" constant="16" id="tpC-Nm-Enz"/>
+                            <constraint firstItem="u4r-RM-1Gj" firstAttribute="top" secondItem="iR5-BM-qKY" secondAttribute="bottom" constant="8" id="tqf-Kq-Nre"/>
+                            <constraint firstItem="u4r-RM-1Gj" firstAttribute="top" secondItem="iR5-BM-qKY" secondAttribute="bottom" constant="8" id="usF-ES-1kt"/>
+                            <constraint firstItem="3rV-gM-tXa" firstAttribute="top" secondItem="u4r-RM-1Gj" secondAttribute="bottom" constant="16" id="ycx-Ci-I4P"/>
+                            <constraint firstItem="EgF-Z9-4MG" firstAttribute="leading" secondItem="kY7-Fd-6Vd" secondAttribute="leading" constant="20" id="yyL-mD-62e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HVR-kf-sKR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3KT-xq-74O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7638.9312977099235" y="-721.12676056338034"/>
         </scene>
         <!--Add Rizz View Controller-->
         <scene sceneID="lpV-BR-5PE">
