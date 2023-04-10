@@ -7,7 +7,10 @@
 
 import UIKit
 
+
+
 class HomeViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     // add ui table view source to class
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        //return #number of users api call

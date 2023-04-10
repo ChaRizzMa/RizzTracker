@@ -397,7 +397,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Y18-Ux-0hm">
-                                                            <rect key="frame" x="20" y="11" width="121.66666666666669" height="20.333333333333332"/>
+                                                            <rect key="frame" x="20" y="10.999999999999998" width="121.66666666666669" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVj-jc-Ljr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="20.333333333333332"/>
@@ -428,7 +428,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sFK-Gu-cN2">
-                                                            <rect key="frame" x="20" y="11" width="118.33333333333331" height="20.333333333333332"/>
+                                                            <rect key="frame" x="20" y="10.999999999999998" width="118.33333333333331" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-4z-tmk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="20.333333333333332"/>
@@ -459,7 +459,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WVt-mK-SM3">
-                                                            <rect key="frame" x="20" y="11" width="99.666666666666671" height="20.333333333333332"/>
+                                                            <rect key="frame" x="20.000000000000007" y="10.999999999999998" width="99.666666666666686" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="77" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl1-48-9R4">
                                                                     <rect key="frame" x="0.0" y="0.0" width="19" height="20.333333333333332"/>
@@ -490,7 +490,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-aD-Fja">
-                                                            <rect key="frame" x="20" y="11" width="117.33333333333331" height="20.333333333333332"/>
+                                                            <rect key="frame" x="20" y="10.999999999999998" width="117.33333333333331" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="66" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5O-zK-ANd">
                                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="20.333333333333332"/>
@@ -521,7 +521,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-RJ-RFT">
-                                                            <rect key="frame" x="20" y="11" width="100.33333333333333" height="20.333333333333332"/>
+                                                            <rect key="frame" x="19.999999999999993" y="10.999999999999998" width="100.33333333333331" height="20.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-7O-IVt">
                                                                     <rect key="frame" x="0.0" y="0.0" width="20.333333333333332" height="20.333333333333332"/>
@@ -566,7 +566,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9i8-8f-6oG"/>
                     <connections>
-                        <outlet property="tableView" destination="eId-O2-3Ef" id="cAC-2N-W8F"/>
+                        <outlet property="tableView" destination="eId-O2-3Ef" id="rKT-3H-B3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQ5-bK-eRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -707,7 +707,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tWc-ce-hCv">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="C07-hf-Gv5">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lae-N7-pMm" userLabel="Log Out">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lae-N7-pMm" userLabel="Log Out">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
