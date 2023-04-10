@@ -30,12 +30,33 @@ class LoginViewController: UIViewController {
      TODO: Add segue to on login button tap if the username and password are correct
      */
     @IBAction func onLoginButtonTap(_ sender: Any) {
-        print((UsernameField.text!) as String)
         // if correct credentials login:
         // performSegue(withIdentifier: "Homepage", sender: sender)
         // else: perform error handling
         
-//        User.login(password: <#T##String#>, completion: <#T##(Result<User, ParseError>) -> Void#>)
+        guard let username = UsernameField.text,
+              let password = PasswordField.text,
+              !username.isEmpty,
+              !password.isEmpty else {
+
+            showMissingFieldsAlert()
+            return
+        }
+        
+        // Log in the parse user
+        PFUser.login(username: username, password: password) { [weak self] result in
+
+            switch result {
+            case .success(let PFUser):
+                print("✅ Successfully logged in as user: \(String(describing: PFUser.username))")
+
+                // Post a notification that the user has successfully logged in.
+                NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
+
+            case .failure(let error):
+                self?.showAlert(description: error.localizedDescription)
+            }
+        }
         
     }
     
@@ -43,6 +64,19 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "CreateAccountSegue", sender: (Any).self)
     }
     
+    private func showAlert(description: String?) {
+        let alertController = UIAlertController(title: "Unable to Log in", message: description ?? "Unknown error", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        present(alertController, animated: true)
+    }
+
+    private func showMissingFieldsAlert() {
+        let alertController = UIAlertController(title: "Opps...", message: "We need all fields filled out in order to log you in.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        present(alertController, animated: true)
+    }
     
     /*
     // MARK: - Navigation
