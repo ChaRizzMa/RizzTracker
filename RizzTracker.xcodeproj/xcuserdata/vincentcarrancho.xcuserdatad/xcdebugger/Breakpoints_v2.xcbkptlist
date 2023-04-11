@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8B8B6749-72B3-4A6B-BCAF-07A2D6B2FE61"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC52F819-7F98-4645-9569-F12CA125587A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RizzTracker/Models/User.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27">
+            <Locations>
+               <Location
+                  uuid = "AC52F819-7F98-4645-9569-F12CA125587A - 828f51e40153b630"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RizzTracker.User.__allocating_init(fullname: Swift.String, emailAddress: Swift.String, phoneNumber: Swift.String, userName: Swift.String, password: Swift.String, pronouns: Swift.String, attractionPreference: Swift.String, initialRizz: Swift.Double, selfConfidence: Swift.Double) -&gt; RizzTracker.User"
+                  moduleName = "RizzTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vincentcarrancho/Documents/Xcode%20Projects/Codepath%20Projects/RizzTracker/RizzTracker/Models/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "AC52F819-7F98-4645-9569-F12CA125587A - 7e3092f504d8bcad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RizzTracker.User.init(fullname: Swift.String, emailAddress: Swift.String, phoneNumber: Swift.String, userName: Swift.String, password: Swift.String, pronouns: Swift.String, attractionPreference: Swift.String, initialRizz: Swift.Double, selfConfidence: Swift.Double) -&gt; RizzTracker.User"
+                  moduleName = "RizzTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vincentcarrancho/Documents/Xcode%20Projects/Codepath%20Projects/RizzTracker/RizzTracker/Models/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
