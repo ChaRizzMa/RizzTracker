@@ -10,44 +10,226 @@ import ParseSwift
 
 // TODO: Fix teh damn index shit
 
+
+
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let query = Rizzults.query()
-    var rizzults: [Rizzults]! = []
-    var usernames: [String] = []
+    var rizzults: [Rizzults] = [
+        Rizzults(
+        owner: "None",
+        objectID: "None",
+        badsQuantity: -1,
+        wantMeFrFRQuantity: -1,
+        goingToTalkToQuantity: -1,
+        numberComunications: -1,
+        descriptionOfSituation: "None"
+    ),
+        Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        ),Rizzults(
+            owner: "None",
+            objectID: "None",
+            badsQuantity: -1,
+            wantMeFrFRQuantity: -1,
+            goingToTalkToQuantity: -1,
+            numberComunications: -1,
+            descriptionOfSituation: "None"
+        )
+    ]
+    var overalls: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // TODO: figure out all the data fetching
+        
         Task {
             do {
                 // todo add fetch loading
                 print("Query starting ✅")
-                rizzults = try? await query.findAll()
+                let data = try await query.findAll()
+                DispatchQueue.main.async {
+                    // Set the view controller's tracks property as this is the one the table view references
+                    self.rizzults = data
+                    //print(self?.Movies)
+                    // Make the table view reload now that we have new data
+                    self.tableView.reloadData()
+                }
                 print("Successfully Fetched ✅")
-                // print(rizzults)
-                tableView.dataSource = self
             } catch let error {
                 print("Error: ❌", error)
             }
         }
-        
-        for r in rizzults {
-            usernames.append(String(r.owner ?? "NO USER"))
-        }
-        
-        print(usernames)
-
     }
-
+    
 }
 extension HomeViewController: UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "DetailViewSegue", let destination = segue.destination as? DetailViewController, let index = tableView.indexPathForSelectedRow?.item {
-            destination.rizzult = rizzults![index]
+            destination.rizzult = rizzults[index]
         }
     }
     
@@ -62,14 +244,15 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20// change to 100 rizzults?.count ?? 10
+        return rizzults.count ?? 40
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! UserTableViewCell
-        var index = indexPath.row
-        cell.overallNameLabel.text = String(Int.random(in: 20...93))
-        cell.userNameLabel.text = "" // Fix this
+        var index = indexPath.item
+        cell.overallNameLabel.text = String( rizzults[index].owner ?? String(-1))
+        cell.userNameLabel.text = String( rizzults[index].owner ?? String(-1))
+        print("INDEX: ", index)
         return cell
     }
 }
