@@ -83,6 +83,14 @@
 			path = HomeControllers;
 			sourceTree = "<group>";
 		};
+		ACCD954B29E703E60067980D /* AddRizzController */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD954929E35F120067980D /* AddRizzViewController.swift */,
+			);
+			path = AddRizzController;
+			sourceTree = "<group>";
+		};
 		ACD0113C29BA41A400025FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +132,7 @@
 		ACFC5ABC29B7F3E100E38E48 /* RizzTracker */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD954B29E703E60067980D /* AddRizzController */,
 				65D0BA6F29E3A3C7007DA8E0 /* DetailControllers */,
 				E17A128529E363860057959D /* Rizz */,
 				ACD0113C29BA41A400025FA9 /* Models */,
@@ -135,7 +144,6 @@
 				ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */,
 				ACFC5AC829B7F3E300E38E48 /* LaunchScreen.storyboard */,
 				ACFC5ACB29B7F3E300E38E48 /* Info.plist */,
-				ACCD954929E35F120067980D /* AddRizzViewController.swift */,
 			);
 			path = RizzTracker;
 			sourceTree = "<group>";

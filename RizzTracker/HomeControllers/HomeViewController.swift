@@ -250,7 +250,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! UserTableViewCell
         var index = indexPath.item
-        cell.overallNameLabel.text = String( rizzults[index].owner ?? String(-1))
+        cell.overallNameLabel.text = String( rizzults[index].ownerRizz as? String ?? "-1")
         cell.userNameLabel.text = String( rizzults[index].owner ?? String(-1))
         print("INDEX: ", index)
         return cell

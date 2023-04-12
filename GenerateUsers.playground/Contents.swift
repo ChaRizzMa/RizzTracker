@@ -69,9 +69,11 @@ for _ in 1...20 {
 for user in usersArray {
     // for each user this forloop will loop for how many rizzults they will make
     for _ in 1...Int.random(in: 2...7) {
+        
         var newRizzult = Rizzults(
             owner: user.username,
             objectID: user.objectId,
+            ownerRizz: Int(user.currentRizz ?? -1),
             badsQuantity: Int.random(in: 5...25),
             wantMeFrFRQuantity: Int.random(in: 5...25),
             goingToTalkToQuantity: Int.random(in: 5...10),
