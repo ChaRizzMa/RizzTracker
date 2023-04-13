@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65D0BA7129E3A426007DA8E0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0BA7029E3A426007DA8E0 /* DetailViewController.swift */; };
+		84C6956F29E08C32000CA34B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6956E29E08C32000CA34B /* HomeViewController.swift */; };
+		84C6957129E08C97000CA34B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6957029E08C97000CA34B /* UserTableViewCell.swift */; };
 		AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */; };
 		ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACAE525C29DF985400CFF90F /* ParseSwift */; };
+		ACCD953F29E227540067980D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD953E29E227540067980D /* Math.swift */; };
+		ACCD954329E22B930067980D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = ACCD954229E22B930067980D /* Fakery */; };
+		ACCD954529E237100067980D /* Rizzsults.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD954429E237100067980D /* Rizzsults.swift */; };
+		ACCD954829E23EFE0067980D /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = ACCD954729E23EFE0067980D /* LoremSwiftum */; };
+		ACCD954A29E35F120067980D /* AddRizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD954929E35F120067980D /* AddRizzViewController.swift */; };
 		ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0113D29BA41E100025FA9 /* PFUser.swift */; };
 		ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114629BF7C0000025FA9 /* LoginViewController.swift */; };
 		ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */; };
@@ -18,10 +26,18 @@
 		ACFC5AC729B7F3E300E38E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */; };
 		ACFC5ACA29B7F3E300E38E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC5AC829B7F3E300E38E48 /* LaunchScreen.storyboard */; };
 		E17A128429DFB7600057959D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A128329DFB7600057959D /* User.swift */; };
+		E17A128729E363FC0057959D /* MyRizzCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A128629E363FC0057959D /* MyRizzCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65D0BA7029E3A426007DA8E0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		84C6956E29E08C32000CA34B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84C6957029E08C97000CA34B /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		AC11950929C90A2A000B910A /* CreateAccountViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController2.swift; sourceTree = "<group>"; };
+		ACCD953E29E227540067980D /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		ACCD954029E22B360067980D /* GenerateUsers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenerateUsers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ACCD954429E237100067980D /* Rizzsults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rizzsults.swift; sourceTree = "<group>"; };
+		ACCD954929E35F120067980D /* AddRizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRizzViewController.swift; sourceTree = "<group>"; };
 		ACD0113D29BA41E100025FA9 /* PFUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFUser.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +49,7 @@
 		ACFC5AC929B7F3E300E38E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACFC5ACB29B7F3E300E38E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17A128329DFB7600057959D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E17A128629E363FC0057959D /* MyRizzCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRizzCellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,18 +57,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCD954329E22B930067980D /* Fakery in Frameworks */,
 				ACAE525D29DF985400CFF90F /* ParseSwift in Frameworks */,
+				ACCD954829E23EFE0067980D /* LoremSwiftum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65D0BA6F29E3A3C7007DA8E0 /* DetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65D0BA7029E3A426007DA8E0 /* DetailViewController.swift */,
+			);
+			path = DetailControllers;
+			sourceTree = "<group>";
+		};
+		84C6956D29E08BB1000CA34B /* HomeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84C6956E29E08C32000CA34B /* HomeViewController.swift */,
+				84C6957029E08C97000CA34B /* UserTableViewCell.swift */,
+			);
+			path = HomeControllers;
+			sourceTree = "<group>";
+		};
+		ACCD954B29E703E60067980D /* AddRizzController */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD954929E35F120067980D /* AddRizzViewController.swift */,
+			);
+			path = AddRizzController;
+			sourceTree = "<group>";
+		};
 		ACD0113C29BA41A400025FA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				ACD0113D29BA41E100025FA9 /* PFUser.swift */,
 				E17A128329DFB7600057959D /* User.swift */,
+				ACCD953E29E227540067980D /* Math.swift */,
+				ACCD954429E237100067980D /* Rizzsults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -69,6 +115,7 @@
 		ACFC5AB129B7F3E100E38E48 = {
 			isa = PBXGroup;
 			children = (
+				ACCD954029E22B360067980D /* GenerateUsers.playground */,
 				ACFC5ABC29B7F3E100E38E48 /* RizzTracker */,
 				ACFC5ABB29B7F3E100E38E48 /* Products */,
 			);
@@ -85,16 +132,28 @@
 		ACFC5ABC29B7F3E100E38E48 /* RizzTracker */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD954B29E703E60067980D /* AddRizzController */,
+				65D0BA6F29E3A3C7007DA8E0 /* DetailControllers */,
+				E17A128529E363860057959D /* Rizz */,
 				ACD0113C29BA41A400025FA9 /* Models */,
 				ACFC5ABD29B7F3E100E38E48 /* AppDelegate.swift */,
 				ACFC5ABF29B7F3E100E38E48 /* SceneDelegate.swift */,
 				ACFC5AC329B7F3E100E38E48 /* Main.storyboard */,
+				84C6956D29E08BB1000CA34B /* HomeControllers */,
 				ACD0114129BF7B8700025FA9 /* LoginControllers */,
 				ACFC5AC629B7F3E300E38E48 /* Assets.xcassets */,
 				ACFC5AC829B7F3E300E38E48 /* LaunchScreen.storyboard */,
 				ACFC5ACB29B7F3E300E38E48 /* Info.plist */,
 			);
 			path = RizzTracker;
+			sourceTree = "<group>";
+		};
+		E17A128529E363860057959D /* Rizz */ = {
+			isa = PBXGroup;
+			children = (
+				E17A128629E363FC0057959D /* MyRizzCellViewController.swift */,
+			);
+			path = Rizz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +174,8 @@
 			name = RizzTracker;
 			packageProductDependencies = (
 				ACAE525C29DF985400CFF90F /* ParseSwift */,
+				ACCD954229E22B930067980D /* Fakery */,
+				ACCD954729E23EFE0067980D /* LoremSwiftum */,
 			);
 			productName = RizzTracker;
 			productReference = ACFC5ABA29B7F3E100E38E48 /* RizzTracker.app */;
@@ -146,6 +207,8 @@
 			mainGroup = ACFC5AB129B7F3E100E38E48;
 			packageReferences = (
 				ACAE525B29DF985400CFF90F /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				ACCD954129E22B930067980D /* XCRemoteSwiftPackageReference "Fakery" */,
+				ACCD954629E23EFE0067980D /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
 			);
 			productRefGroup = ACFC5ABB29B7F3E100E38E48 /* Products */;
 			projectDirPath = "";
@@ -175,12 +238,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD0114929BF983E00025FA9 /* CreateAccountViewController.swift in Sources */,
+				84C6957129E08C97000CA34B /* UserTableViewCell.swift in Sources */,
+				ACCD954A29E35F120067980D /* AddRizzViewController.swift in Sources */,
+				ACCD954529E237100067980D /* Rizzsults.swift in Sources */,
 				ACD0113E29BA41E100025FA9 /* PFUser.swift in Sources */,
+				E17A128729E363FC0057959D /* MyRizzCellViewController.swift in Sources */,
 				ACFC5ABE29B7F3E100E38E48 /* AppDelegate.swift in Sources */,
+				84C6956F29E08C32000CA34B /* HomeViewController.swift in Sources */,
 				AC11950A29C90A2A000B910A /* CreateAccountViewController2.swift in Sources */,
 				ACD0114729BF7C0000025FA9 /* LoginViewController.swift in Sources */,
 				ACFC5AC029B7F3E100E38E48 /* SceneDelegate.swift in Sources */,
 				E17A128429DFB7600057959D /* User.swift in Sources */,
+				ACCD953F29E227540067980D /* Math.swift in Sources */,
+				65D0BA7129E3A426007DA8E0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +476,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		ACCD954129E22B930067980D /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ACCD954629E23EFE0067980D /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -413,6 +499,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ACAE525B29DF985400CFF90F /* XCRemoteSwiftPackageReference "Parse-Swift" */;
 			productName = ParseSwift;
+		};
+		ACCD954229E22B930067980D /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACCD954129E22B930067980D /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+		ACCD954729E23EFE0067980D /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACCD954629E23EFE0067980D /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
