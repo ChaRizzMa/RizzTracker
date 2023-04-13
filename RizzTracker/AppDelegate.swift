@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Task {
             do {
-                let _ = try await ParseSwift.initialize(applicationId: "fvd5uPi58NSeAiXJi9ZXjtaCq77CYqIRfj4eDapt", clientKey: "rep9DUSg8XCMVnCS7bygCK7e5DrILJGlHGP2aS1e", serverURL: URL(string: "https://parseapi.back4app.com")!)
+                let _ = try await ParseSwift.initialize(applicationId: "44bcjRdXDoe3AthZFEt0yjbrmPQaQYhNn6mmnlSH", clientKey: "oBLtzonFzT0QUmD5rR4BnMcFKFHNlJgw94TG8uVB", serverURL: URL(string: "https://parseapi.back4app.com")!)
             } catch let error {
                 print(error)
             }
