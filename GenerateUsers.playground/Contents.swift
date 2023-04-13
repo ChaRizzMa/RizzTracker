@@ -82,6 +82,7 @@ for user in usersArray {
             descriptionOfSituation: "Fake Data only for test"
         )
         
+        
         newRizzult.save {
             result in
                 switch result {
@@ -91,6 +92,7 @@ for user in usersArray {
                     assertionFailure("Error saving: \(error)")
                 }
         }
+        sleep(1)
     }
     
 }
