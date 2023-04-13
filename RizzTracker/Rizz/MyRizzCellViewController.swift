@@ -39,7 +39,44 @@ class MyRizzCellViewController: UIViewController {
             do {
                 user = try await PFUser.current()
                 print(user!)
+                var fName = user!.firstName
+                var lName = user!.lastName
+                lblIntro.text = String("Hello \(fName ?? "Default Value") \(lName ?? "Default Value")! Here are Your All Time Rizz Stats:")
+                //lblOVR.text =
+                var pronoun1 = ""
+                var pronoun2 = ""
+                var pronoun3 = ""
+                if user?.attractionPreference == "He/Him" {
+                    pronoun1 = "He"
+                    pronoun2 = "Him"
+                    pronoun3 = "Men"
+                } else if user?.attractionPreference == "She/Hers" {
+                    pronoun1 = "She"
+                    pronoun2 = "Her"
+                    pronoun3 = "Women"
+                } else {
+                    pronoun1 = "They"
+                    pronoun2 = "Them"
+                    pronoun3 = "People"
+                }
+                //lblSheBad.text =
+                lblProDamnBad.text = "Damn \(pronoun1) Bad's"
+                //lblSheWant.text =
+                lblProSheWant.text = "\(pronoun1) Want me fr fr's"
+                //lblToTalk.text =
+                lblProToTalk.text = "Going to talk to \(pronoun2)'s"
+                //lblWomanTalked.text =
+                lblProTalkedTo.text = "\(pronoun3) talked to"
+                //lblNumGot.text =
                 
+                //lblSubmittedRizz.text =
+                var initialRizz = NSString(format: "%.0f", user!.initialRizz ?? "")
+                lblInitialRizz.text = String(initialRizz)
+                
+                lblEmail.text = user!.email ?? ""
+                lblPhoneNum.text = user!.phoneNumber ?? ""
+                lblPronouns.text = user!.pronouns ?? ""
+                lblPref.text = user!.attractionPreference ?? ""
             } catch let error {
                 print("an error occurred: \(error)")
             }
