@@ -28,14 +28,33 @@ class AddRizzViewController: UIViewController {
     @IBOutlet weak var question5Field: UITextField!
     @IBOutlet weak var question6Field: UITextField!
     
-    var user: PFUser!
+    var user: PFUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        question1.text = "1. How many “damn {pronouns} bad”s did you think or say to yourself tonight?"
-        question2.text = "2. How many “{pronoun} want me fr fr”s did you think or say to yourself tonight?"
-        question3.text = "3. How many “I’m going to talk to {pronoun}”s did you think or say to yourself tonight?"
-        question4.text = "4. How many {noun} did you talk to?"
+        
+        var pronoun1 = ""
+        var pronoun2 = ""
+        var pronoun3 = ""
+       
+        if user?.attractionPreference == "He/Him" {
+            pronoun1 = "He"
+            pronoun2 = "Him"
+            pronoun3 = "Men"
+        } else if user?.attractionPreference == "She/Hers" {
+            pronoun1 = "She"
+            pronoun2 = "Her"
+            pronoun3 = "Women"
+        } else {
+            pronoun1 = "They"
+            pronoun2 = "Them"
+            pronoun3 = "People"
+        }
+        
+        question1.text = "1. How many “damn \(pronoun1.lowercased()) bad's\" did you think or say to yourself tonight?"
+        question2.text = "2. How many “\(pronoun1.lowercased()) want me fr fr's” did you think or say to yourself tonight?"
+        question3.text = "3. How many “I’m going to talk to \(pronoun2.lowercased())”s did you think or say to yourself tonight?"
+        question4.text = "4. How many \(pronoun3.lowercased()) did you talk to?"
         question5.text = "5. How many numbers, Instagrams, Snapchats, etc, have you gotten?"
         question6.text = "6. Please write a description of what happened."
         
@@ -62,8 +81,8 @@ class AddRizzViewController: UIViewController {
     
     @IBAction func onSubmit(_ sender: Any) {
         var newRizzult = Rizzults(
-            owner: user.username,
-            objectID: user.objectId,
+            owner: user?.username,
+            objectID: user?.objectId,
             badsQuantity: Int(question1Field.text ?? "0"),
             wantMeFrFRQuantity: Int(question2Field.text ?? "0"),
             goingToTalkToQuantity: Int(question3Field.text ?? "0"),
@@ -91,5 +110,5 @@ class AddRizzViewController: UIViewController {
     
     
     
-    
+
 }
