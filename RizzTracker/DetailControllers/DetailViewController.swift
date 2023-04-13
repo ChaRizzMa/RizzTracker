@@ -58,14 +58,25 @@ class DetailViewController: UIViewController {
             commsGottenLabel.text = "\(rizzult?.numberComunications ?? -1)x Numbers gotten"
             notesLabel.text = "\(rizzult?.descriptionOfSituation ?? "No Data")"
             
-            if(rizzult?.ownerRizz ?? -1 > 70){
-                emojiRating.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
-                emojiRating.text = "🙌 W Rizz!"
-                textRating.text = "Congrats!"
-            }else{
+            
+            var check  = rizzult?.ownerRizz ?? -1
+            
+            if case -1...50 = check {
                 emojiRating.textColor = UIColor.red
                 emojiRating.text = "🤣 L Rizz"
                 textRating.text = "But it's okay!"
+            } else if case 51...70 = check {
+                emojiRating.textColor = UIColor.orange
+                emojiRating.text = "😕 Mid Rizz!"
+                textRating.text = "You can do better!"
+            } else if case 71...80 = check {
+                emojiRating.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
+                emojiRating.text = "😏 Valid Rizz!"
+                textRating.text = "Almost a W!"
+            } else if case 81...100 = check {
+                emojiRating.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
+                emojiRating.text = "🙌 W Rizz!"
+                textRating.text = "Congrats!"
             }
         }
     }
