@@ -47,9 +47,9 @@ class DetailViewController: UIViewController {
             commsGottenLabel.text = "No Data"
             notesLabel.text = "No Data"
         } else {
-            damnBadLabel.text = "\(rizzult?.badsQuantity ?? -1)x Damn \(pronoun1) bad"
-            wantMeFrLabel.text = "\(rizzult?.wantMeFrFRQuantity ?? -1)x \(pronoun1) want me frfr"
-            goingToTalkLabel.text = "\(rizzult?.goingToTalkToQuantity ?? -1)x I'm going to talk to \(pronoun2)"
+            damnBadLabel.text = "\(rizzult?.badsQuantity ?? -1)x Damn \(pronoun1.lowercased()) bad"
+            wantMeFrLabel.text = "\(rizzult?.wantMeFrFRQuantity ?? -1)x \(pronoun1.lowercased()) want me frfr"
+            goingToTalkLabel.text = "\(rizzult?.goingToTalkToQuantity ?? -1)x I'm going to talk to \(pronoun2.lowercased())"
             numberTalkedToLabel.text = "\(rizzult?.howManyTalkedTo ?? -1)x \(pronoun3) talked to"
             commsGottenLabel.text = "\(rizzult?.numberComunications ?? -1)x numbers gotten (including Instagram, WhatsApp, Snapchat, etc)"
             notesLabel.text = "\(rizzult?.descriptionOfSituation ?? "No Data")"
