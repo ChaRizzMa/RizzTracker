@@ -372,7 +372,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-RJ-RFT">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="100.33333333333334" height="20.666666666666671"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="100.33333333333333" height="20.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-7O-IVt">
                                                             <rect key="frame" x="0.0" y="0.33333333333333393" width="20.333333333333332" height="20.333333333333329"/>
@@ -556,6 +556,23 @@
                                                     <constraint firstAttribute="height" constant="1" id="6EM-Nb-5U3"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RPZ-jb-Op4">
+                                                <rect key="frame" x="130" y="465.33333333333337" width="133.33333333333337" height="64"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emojiRating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7v2-Iv-yJP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.33333333333334" height="28.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textRating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L78-on-3WG">
+                                                        <rect key="frame" x="27.666666666666664" y="43.666666666666629" width="77.666666666666686" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -563,6 +580,7 @@
                                             <constraint firstAttribute="trailing" secondItem="eym-aG-BHb" secondAttribute="trailing" constant="16" id="GzY-SD-W5X"/>
                                             <constraint firstAttribute="trailing" secondItem="RcK-oF-f7I" secondAttribute="trailing" constant="16" id="HCT-Vj-J9r"/>
                                             <constraint firstItem="Udw-S8-hTv" firstAttribute="top" secondItem="RcK-oF-f7I" secondAttribute="bottom" constant="16" id="Ld7-O8-L0i"/>
+                                            <constraint firstItem="RPZ-jb-Op4" firstAttribute="centerX" secondItem="L3Z-NW-ihU" secondAttribute="centerX" id="TIK-Il-LUm"/>
                                             <constraint firstItem="RcK-oF-f7I" firstAttribute="top" secondItem="eym-aG-BHb" secondAttribute="bottom" constant="16" id="UpG-Ve-rj0"/>
                                             <constraint firstAttribute="trailing" secondItem="Udw-S8-hTv" secondAttribute="trailing" constant="16" id="WWy-1X-pJq"/>
                                             <constraint firstItem="eym-aG-BHb" firstAttribute="top" secondItem="Giv-0R-srV" secondAttribute="bottom" constant="16" id="ZXX-rK-Gd4"/>
@@ -570,6 +588,7 @@
                                             <constraint firstItem="Udw-S8-hTv" firstAttribute="leading" secondItem="L3Z-NW-ihU" secondAttribute="leading" constant="16" id="dTQ-fT-xuf"/>
                                             <constraint firstItem="Giv-0R-srV" firstAttribute="leading" secondItem="L3Z-NW-ihU" secondAttribute="leading" constant="16" id="kK1-oj-L38"/>
                                             <constraint firstAttribute="trailing" secondItem="Giv-0R-srV" secondAttribute="trailing" constant="16" id="oIt-0z-j2C"/>
+                                            <constraint firstItem="RPZ-jb-Op4" firstAttribute="top" secondItem="Udw-S8-hTv" secondAttribute="bottom" constant="16" id="vR1-D5-K1o"/>
                                             <constraint firstItem="eym-aG-BHb" firstAttribute="leading" secondItem="L3Z-NW-ihU" secondAttribute="leading" constant="16" id="wnd-pm-qdS"/>
                                         </constraints>
                                     </view>
@@ -597,9 +616,11 @@
                     <connections>
                         <outlet property="commsGottenLabel" destination="L6E-8J-4lr" id="zFM-Ey-nFD"/>
                         <outlet property="damnBadLabel" destination="wwe-qL-TaU" id="pKl-IV-YfF"/>
+                        <outlet property="emojiRating" destination="7v2-Iv-yJP" id="eNb-yV-Px6"/>
                         <outlet property="goingToTalkLabel" destination="QCb-DE-sPO" id="ZbF-9J-z2c"/>
                         <outlet property="notesLabel" destination="RcK-oF-f7I" id="Spp-CH-B23"/>
                         <outlet property="numberTalkedToLabel" destination="Pxx-bu-xu9" id="Alx-a3-IZN"/>
+                        <outlet property="textRating" destination="L78-on-3WG" id="yv6-AB-Ucq"/>
                         <outlet property="wantMeFrLabel" destination="eiM-cq-QOG" id="jrH-Yp-wx4"/>
                     </connections>
                 </viewController>

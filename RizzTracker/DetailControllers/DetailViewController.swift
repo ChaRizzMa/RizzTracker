@@ -18,6 +18,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var numberTalkedToLabel: UILabel!
     @IBOutlet weak var commsGottenLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var emojiRating: UILabel!
+    @IBOutlet weak var textRating: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,8 @@ class DetailViewController: UIViewController {
             numberTalkedToLabel.text = "No Data"
             commsGottenLabel.text = "No Data"
             notesLabel.text = "No Data"
+            emojiRating.text = "No Data"
+            textRating.text = "No Data"
         } else {
             damnBadLabel.text = "\(rizzult?.badsQuantity ?? -1)x Damn \(pronoun1.lowercased()) bad"
             wantMeFrLabel.text = "\(rizzult?.wantMeFrFRQuantity ?? -1)x \(pronoun1) want me frfr"
@@ -53,6 +57,16 @@ class DetailViewController: UIViewController {
             numberTalkedToLabel.text = "\(rizzult?.howManyTalkedTo ?? -1)x \(pronoun3) talked to"
             commsGottenLabel.text = "\(rizzult?.numberComunications ?? -1)x Numbers gotten"
             notesLabel.text = "\(rizzult?.descriptionOfSituation ?? "No Data")"
+            
+            if(rizzult?.ownerRizz ?? -1 > 70){
+                emojiRating.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
+                emojiRating.text = "🙌 W Rizz!"
+                textRating.text = "Congrats!"
+            }else{
+                emojiRating.textColor = UIColor.red
+                emojiRating.text = "🤣 L Rizz"
+                textRating.text = "But it's okay!"
+            }
         }
     }
 }
