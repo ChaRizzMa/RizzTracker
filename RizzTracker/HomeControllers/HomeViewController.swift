@@ -249,8 +249,24 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! UserTableViewCell
         var index = indexPath.item
-        cell.overallNameLabel.text = String(rizzults[index].ownerRizz ?? -1)
+        cell.ownerOverall = rizzults[index].ownerRizz ?? -1
+        cell.overallNameLabel.text = String(rizzults[index].ownerRizz ?? -1) + " OVR"
         cell.userNameLabel.text = String( rizzults[index].owner ?? String(-1))
+        let ownerOverall = rizzults[index].ownerRizz ?? -1
+        if case -1...50 = ownerOverall {
+            cell.overallNameLabel.textColor = UIColor.red
+            cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        } else if case 51...70 = ownerOverall {
+            cell.overallNameLabel.textColor = UIColor.orange
+            cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        } else if case 71...80 = ownerOverall {
+            cell.overallNameLabel.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
+            cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        } else if case 81...100 = ownerOverall {
+            cell.overallNameLabel.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
+            cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        }
+        
         print("INDEX: ", index)
         return cell
     }
