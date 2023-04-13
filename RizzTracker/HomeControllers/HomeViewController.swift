@@ -204,7 +204,6 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         
         // TODO: figure out all the data fetching
-        
         Task {
             do {
                 // todo add fetch loading

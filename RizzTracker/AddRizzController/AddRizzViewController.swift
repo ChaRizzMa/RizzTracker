@@ -33,42 +33,47 @@ class AddRizzViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var pronoun1 = ""
-        var pronoun2 = ""
-        var pronoun3 = ""
-       
-        if user?.attractionPreference == "He/Him" {
-            pronoun1 = "He"
-            pronoun2 = "Him"
-            pronoun3 = "Men"
-        } else if user?.attractionPreference == "She/Hers" {
-            pronoun1 = "She"
-            pronoun2 = "Her"
-            pronoun3 = "Women"
-        } else {
-            pronoun1 = "They"
-            pronoun2 = "Them"
-            pronoun3 = "People"
-        }
-        
-        question1.text = "1. How many “damn \(pronoun1.lowercased()) bad's\" did you think or say to yourself tonight?"
-        question2.text = "2. How many “\(pronoun1.lowercased()) want me fr fr's” did you think or say to yourself tonight?"
-        question3.text = "3. How many “I’m going to talk to \(pronoun2.lowercased())”s did you think or say to yourself tonight?"
-        question4.text = "4. How many \(pronoun3.lowercased()) did you talk to?"
-        question5.text = "5. How many numbers, Instagrams, Snapchats, etc, have you gotten?"
-        question6.text = "6. Please write a description of what happened."
-        
-        question1Field.text = String(0)
-        question1Field.text = String(0)
-        question1Field.text = String(0)
-        question1Field.text = String(0)
-        question1Field.text = String(0)
-        question1Field.text = ""
+        var pronoun1 = "-1"
+        var pronoun2 = "-1"
+        var pronoun3 = "-1"
         
         Task {
             do {
                 user = try await PFUser.current()
-                print(user)
+                print("Add Rizz: ✅", user)
+                print("Attraction Preferences ✅", user?.attractionPreference ?? "-1")
+                let attractionPreferences = user?.attractionPreference ?? "-1"
+                if attractionPreferences == "He/Him" {
+                    print("Attracted to men")
+                    pronoun1 = "He"
+                    pronoun2 = "Him"
+                    pronoun3 = "Men"
+                } else if attractionPreferences == "She/Hers" {
+                    print("Attracted to women")
+                    pronoun1 = "She"
+                    pronoun2 = "Her"
+                    pronoun3 = "Women"
+                } else if attractionPreferences == "They/Them" {
+                    print("Attracted to them")
+                    pronoun1 = "They"
+                    pronoun2 = "Them"
+                    pronoun3 = "People"
+                }
+                
+                question1.text = "1. How many “damn \(pronoun1.lowercased()) bad's\" did you think or say to yourself tonight?"
+                question2.text = "2. How many “\(pronoun1.lowercased()) want me fr fr's” did you think or say to yourself tonight?"
+                question3.text = "3. How many “I’m going to talk to \(pronoun2.lowercased())”s did you think or say to yourself tonight?"
+                question4.text = "4. How many \(pronoun3.lowercased()) did you talk to?"
+                question5.text = "5. How many numbers, Instagrams, Snapchats, etc, have you gotten?"
+                question6.text = "6. Please write a description of what happened."
+                
+                question1Field.text = String(0)
+                question1Field.text = String(0)
+                question1Field.text = String(0)
+                question1Field.text = String(0)
+                question1Field.text = String(0)
+                question1Field.text = ""
+                
             } catch let error {
                 print("An error occurred: \(error)")
             }

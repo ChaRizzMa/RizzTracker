@@ -30,46 +30,45 @@ class MyRizzCellViewController: UIViewController {
     @IBOutlet weak var lblPronouns: UILabel!
     @IBOutlet weak var lblPref: UILabel!
     
-    var user: PFUser!
+    var user: PFUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var pronoun1 = ""
+        var pronoun2 = ""
+        var pronoun3 = ""
         
         Task {
             do {
                 user = try await PFUser.current()
-                print(user!)
-                var fName = user!.firstName
-                var lName = user!.lastName
-                lblIntro.text = String("Hello \(fName ?? "Default Value") \(lName ?? "Default Value")! Here are Your All Time Rizz Stats:")
-                //lblOVR.text =
-                var pronoun1 = ""
-                var pronoun2 = ""
-                var pronoun3 = ""
-                if user?.attractionPreference == "He/Him" {
+                print("My Rizz: ✅", user)
+                let fName = user?.firstName ?? "-1"
+                let lName = user?.lastName ?? "-1"
+                
+                // TODO: Fix this and connect the labels to the main storyboard file
+                lblIntro.text = String("Hello \(fName)! Here are Your All Time Rizz Stats:")
+                
+                let attractionPreferences = user?.attractionPreference ?? "-1"
+                
+                if attractionPreferences == "He/Him" {
                     pronoun1 = "He"
                     pronoun2 = "Him"
                     pronoun3 = "Men"
-                } else if user?.attractionPreference == "She/Hers" {
+                } else if attractionPreferences == "She/Hers" {
                     pronoun1 = "She"
                     pronoun2 = "Her"
                     pronoun3 = "Women"
-                } else {
+                } else if attractionPreferences == "They/Them" {
                     pronoun1 = "They"
                     pronoun2 = "Them"
                     pronoun3 = "People"
                 }
-                //lblSheBad.text =
-                lblProDamnBad.text = "Damn \(pronoun1) Bad's"
-                //lblSheWant.text =
-                lblProSheWant.text = "\(pronoun1) Want me fr fr's"
-                //lblToTalk.text =
-                lblProToTalk.text = "Going to talk to \(pronoun2)'s"
-                //lblWomanTalked.text =
-                lblProTalkedTo.text = "\(pronoun3) talked to"
-                //lblNumGot.text =
                 
-                //lblSubmittedRizz.text =
+                lblProDamnBad.text = "Damn \(pronoun1) Bad's"
+                lblProSheWant.text = "\(pronoun1) Want me fr fr's"
+                lblProToTalk.text = "Going to talk to \(pronoun2)'s"
+                lblProTalkedTo.text = "\(pronoun3) talked to"
+                
                 var initialRizz = NSString(format: "%.0f", user!.initialRizz ?? "")
                 lblInitialRizz.text = String(initialRizz)
                 
@@ -77,11 +76,14 @@ class MyRizzCellViewController: UIViewController {
                 lblPhoneNum.text = user!.phoneNumber ?? ""
                 lblPronouns.text = user!.pronouns ?? ""
                 lblPref.text = user!.attractionPreference ?? ""
+                
             } catch let error {
-                print("an error occurred: \(error)")
+                print("An error occurred: \(error)")
             }
+            
+            
         }
-        
+
         // Do any additional setup after loading the view.
     }
     
