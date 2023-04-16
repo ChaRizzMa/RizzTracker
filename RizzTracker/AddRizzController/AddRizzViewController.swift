@@ -11,7 +11,7 @@ import UIKit
 // TODO: Adjust layout of the thing!
 class AddRizzViewController: UIViewController {
     
-    // init all input/labels
+
     // labels
     @IBOutlet weak var question1: UILabel!
     @IBOutlet weak var question2: UILabel!
@@ -28,10 +28,20 @@ class AddRizzViewController: UIViewController {
     @IBOutlet weak var question5Field: UITextField!
     @IBOutlet weak var question6Field: UITextField!
     
+    //errors
+    @IBOutlet weak var error1: UILabel!
+    @IBOutlet weak var error2: UILabel!
+    @IBOutlet weak var error3: UILabel!
+    @IBOutlet weak var error4: UILabel!
+    @IBOutlet weak var error5: UILabel!
+    @IBOutlet weak var error6: UILabel!
+    
+    
     var user: PFUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetFourm()
         
         var pronoun1 = "-1"
         var pronoun2 = "-1"
@@ -67,12 +77,6 @@ class AddRizzViewController: UIViewController {
                 question5.text = "5. How many numbers, Instagrams, Snapchats, etc, have you gotten?"
                 question6.text = "6. Please write a description of what happened."
                 
-                question1Field.text = String(0)
-                question1Field.text = String(0)
-                question1Field.text = String(0)
-                question1Field.text = String(0)
-                question1Field.text = String(0)
-                question1Field.text = ""
                 
             } catch let error {
                 print("An error occurred: \(error)")
@@ -80,14 +84,60 @@ class AddRizzViewController: UIViewController {
         }
     }
     
+    func resetFourm(){
+        error1.text = "Required"
+        error2.text = "Required"
+        error3.text = "Required"
+        error4.text = "Required"
+        error5.text = "Required"
+        error6.text = "Required"
+        
+        question1Field.text = ""
+        question2Field.text = ""
+        question3Field.text = ""
+        question4Field.text = ""
+        question5Field.text = ""
+        question6Field.text = ""
+        
+    }
+    
+    //TODO: Finish validations
+    //Validations
+    @IBAction func questionChange1(_ sender: Any) {
+        //TODO: Solve this bug
+        print("changing")
+        
+    }
+    @IBAction func questionChange2(_ sender: Any) {
+    }
+    @IBAction func questionChange3(_ sender: Any) {
+    }
+    @IBAction func questionChange4(_ sender: Any) {
+    }
+    @IBAction func questionChange5(_ sender: Any) {
+    }
+    @IBAction func questionChange6(_ sender: Any) {
+    }
+    
+    func invalidNumber(_ value: String) -> String?{
+        let set = CharacterSet(charactersIn: value)
+        if !CharacterSet.decimalDigits.isSuperset(of: set){
+            return "Value must only contain digits"
+        }
+        return nil
+    }
+    
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
     
     @IBAction func onSubmit(_ sender: Any) {
-        var newRizzult = Rizzults(
+        let newRizzult = Rizzults(
             owner: user?.username,
             objectID: user?.objectId,
+            //TODO: Impliment calculations
+            ownerRizz: 95,
             badsQuantity: Int(question1Field.text ?? "0"),
             wantMeFrFRQuantity: Int(question2Field.text ?? "0"),
             goingToTalkToQuantity: Int(question3Field.text ?? "0"),
@@ -111,6 +161,7 @@ class AddRizzViewController: UIViewController {
         // append this object ID into the rizzults array in teh database
         
         // after submit, reset page or
+        resetFourm()
     }
     
     
