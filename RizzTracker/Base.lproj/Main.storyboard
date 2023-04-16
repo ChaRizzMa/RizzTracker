@@ -372,7 +372,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-RJ-RFT">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="100.33333333333334" height="20.666666666666671"/>
+                                                    <rect key="frame" x="19.999999999999993" y="11.000000000000002" width="100.33333333333331" height="20.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-7O-IVt">
                                                             <rect key="frame" x="0.0" y="0.33333333333333393" width="20.333333333333332" height="20.333333333333329"/>
@@ -411,7 +411,7 @@
                             <constraint firstItem="eId-O2-3Ef" firstAttribute="leading" secondItem="4F0-pI-fTx" secondAttribute="leading" constant="16" id="wkU-Ob-YjU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Rizzults" id="9i8-8f-6oG"/>
+                    <navigationItem key="navigationItem" title="Rizz-ults 🏆" id="9i8-8f-6oG"/>
                     <connections>
                         <outlet property="tableView" destination="eId-O2-3Ef" id="Nkb-CX-isf"/>
                         <segue destination="Pwu-jU-O02" kind="show" identifier="DetailViewSegue" id="edv-H0-TEj"/>
@@ -422,7 +422,7 @@
             </objects>
             <point key="canvasLocation" x="6675.5725190839694" y="-721.12676056338034"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Rizz-ult-->
         <scene sceneID="xRT-Nv-An6">
             <objects>
                 <viewController id="Pwu-jU-O02" customClass="DetailViewController" customModule="RizzTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -617,7 +617,7 @@
                             <constraint firstItem="kY7-Fd-6Vd" firstAttribute="trailing" secondItem="HQR-i6-auW" secondAttribute="trailing" id="xeW-OZ-Bn1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HVR-kf-sKR"/>
+                    <navigationItem key="navigationItem" title="Rizz-ult" id="HVR-kf-sKR"/>
                     <connections>
                         <outlet property="commsGottenLabel" destination="EOu-z3-MIY" id="571-4Y-byr"/>
                         <outlet property="damnBadLabel" destination="wte-NP-Wss" id="c8D-dq-pyx"/>
@@ -749,7 +749,7 @@
                             <constraint firstItem="NjB-oW-MMa" firstAttribute="trailing" secondItem="uqE-84-FAC" secondAttribute="trailing" constant="16" id="uvQ-PN-n4Q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Rizz 🍿" largeTitleDisplayMode="always" id="lt6-gV-tII"/>
+                    <navigationItem key="navigationItem" title="Add Rizz ✍️" largeTitleDisplayMode="always" id="lt6-gV-tII"/>
                     <connections>
                         <outlet property="question1" destination="Gof-iM-BKm" id="2AC-TN-wGX"/>
                         <outlet property="question1Field" destination="owj-KV-B7e" id="O2p-Mx-MoS"/>
@@ -806,6 +806,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Y6-DK-g9W">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -826,8 +830,8 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <color key="textColor" name="AccentColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
