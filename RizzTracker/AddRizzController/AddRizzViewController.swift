@@ -8,11 +8,9 @@
 import UIKit
 
 
-// TODO: Adjust layout of the thing!
 class AddRizzViewController: UIViewController {
-    
 
-    // labels
+    //labels
     @IBOutlet weak var question1: UILabel!
     @IBOutlet weak var question2: UILabel!
     @IBOutlet weak var question3: UILabel!
@@ -20,7 +18,7 @@ class AddRizzViewController: UIViewController {
     @IBOutlet weak var question5: UILabel!
     @IBOutlet weak var question6: UILabel!
     
-    // text fields
+    //text fields
     @IBOutlet weak var question1Field: UITextField!
     @IBOutlet weak var question2Field: UITextField!
     @IBOutlet weak var question3Field: UITextField!
@@ -34,8 +32,9 @@ class AddRizzViewController: UIViewController {
     @IBOutlet weak var error3: UILabel!
     @IBOutlet weak var error4: UILabel!
     @IBOutlet weak var error5: UILabel!
-    @IBOutlet weak var error6: UILabel!
     
+    //button
+    @IBOutlet weak var submitButton: UIButton!
     
     var user: PFUser?
     
@@ -50,21 +49,16 @@ class AddRizzViewController: UIViewController {
         Task {
             do {
                 user = try await PFUser.current()
-                print("Add Rizz: ✅", user)
-                print("Attraction Preferences ✅", user?.attractionPreference ?? "-1")
                 let attractionPreferences = user?.attractionPreference ?? "-1"
                 if attractionPreferences == "He/Him" {
-                    print("Attracted to men")
                     pronoun1 = "He"
                     pronoun2 = "Him"
                     pronoun3 = "Men"
                 } else if attractionPreferences == "She/Hers" {
-                    print("Attracted to women")
                     pronoun1 = "She"
                     pronoun2 = "Her"
                     pronoun3 = "Women"
                 } else if attractionPreferences == "They/Them" {
-                    print("Attracted to them")
                     pronoun1 = "They"
                     pronoun2 = "Them"
                     pronoun3 = "People"
@@ -77,7 +71,6 @@ class AddRizzViewController: UIViewController {
                 question5.text = "5. How many numbers, Instagrams, Snapchats, etc, have you gotten?"
                 question6.text = "6. Please write a description of what happened."
                 
-                
             } catch let error {
                 print("An error occurred: \(error)")
             }
@@ -85,12 +78,20 @@ class AddRizzViewController: UIViewController {
     }
     
     func resetFourm(){
+        
+        submitButton.isEnabled = false
+        
+        error1.isHidden = false
+        error2.isHidden = false
+        error3.isHidden = false
+        error4.isHidden = false
+        error5.isHidden = false
+        
         error1.text = "Required"
         error2.text = "Required"
         error3.text = "Required"
         error4.text = "Required"
         error5.text = "Required"
-        error6.text = "Required"
         
         question1Field.text = ""
         question2Field.text = ""
@@ -98,46 +99,112 @@ class AddRizzViewController: UIViewController {
         question4Field.text = ""
         question5Field.text = ""
         question6Field.text = ""
-        
     }
     
-    //TODO: Finish validations
     //Validations
     @IBAction func questionChange1(_ sender: Any) {
-        //TODO: Solve this bug
-        print("changing")
-        
+        if let value = question1Field.text{
+            if let errorMessage = invalidNumber(value){
+                error1.text = errorMessage
+                error1.isHidden = false
+            }else{
+                error1.isHidden = true
+            }
+        }
+        checkForValidForm()
     }
     @IBAction func questionChange2(_ sender: Any) {
+        if let value = question2Field.text{
+            if let errorMessage = invalidNumber(value){
+                error2.text = errorMessage
+                error2.isHidden = false
+            }else{
+                error2.isHidden = true
+            }
+        }
+        checkForValidForm()
     }
     @IBAction func questionChange3(_ sender: Any) {
+        if let value = question3Field.text{
+            if let errorMessage = invalidNumber(value){
+                error3.text = errorMessage
+                error3.isHidden = false
+            }else{
+                error3.isHidden = true
+            }
+        }
+        checkForValidForm()
     }
     @IBAction func questionChange4(_ sender: Any) {
+        if let value = question4Field.text{
+            if let errorMessage = invalidNumber(value){
+                error4.text = errorMessage
+                error4.isHidden = false
+            }else{
+                error4.isHidden = true
+            }
+        }
+        checkForValidForm()
     }
     @IBAction func questionChange5(_ sender: Any) {
-    }
-    @IBAction func questionChange6(_ sender: Any) {
+        if let value = question5Field.text{
+            if let errorMessage = invalidNumber(value){
+                error5.text = errorMessage
+                error5.isHidden = false
+            }else{
+                error5.isHidden = true
+            }
+        }
+        checkForValidForm()
     }
     
+    //Check if value is a number
     func invalidNumber(_ value: String) -> String?{
         let set = CharacterSet(charactersIn: value)
-        if !CharacterSet.decimalDigits.isSuperset(of: set){
-            return "Value must only contain digits"
+        if !CharacterSet.decimalDigits.isSuperset(of: set) || value == ""{
+            return "Value must contain digits only"
         }
         return nil
     }
     
+    //check if all forms submited
+    func checkForValidForm(){
+        if error1.isHidden && error2.isHidden && error3.isHidden && error4.isHidden && error5.isHidden{
+            submitButton.isEnabled = true
+        }else{
+            submitButton.isEnabled = false
+        }
+    }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
     
     @IBAction func onSubmit(_ sender: Any) {
+        
+        //Calc Rizz, idk what im doing LOL
+        let a =  Double(question1Field.text!)!
+        let b =  Double(question2Field.text!)!
+        let c =  Double(question3Field.text!)!
+        let d =  Double(question4Field.text!)!
+        let e =  Double(question5Field.text!)!
+        
+        let aTerm = a * 0.001
+        let bTerm = b * 0.001
+        let cTerm = c * 0.01
+        let dTerm = d * 0.15
+        let eTerm = e * 0.30
+
+        var overall = (aTerm + bTerm + cTerm + dTerm + eTerm) * 100
+
+        if overall > 100 {
+            overall = 100
+        }
+        print(Int(overall))
+        
         let newRizzult = Rizzults(
             owner: user?.username,
             objectID: user?.objectId,
-            //TODO: Impliment calculations
-            ownerRizz: 95,
+            ownerRizz: Int(overall),
             badsQuantity: Int(question1Field.text ?? "0"),
             wantMeFrFRQuantity: Int(question2Field.text ?? "0"),
             goingToTalkToQuantity: Int(question3Field.text ?? "0"),
@@ -145,8 +212,6 @@ class AddRizzViewController: UIViewController {
             numberComunications: Int(question5Field.text ?? "0"),
             descriptionOfSituation: question6Field.text ?? "Null"
         )
-        
-        
         
         newRizzult.save {
             result in
@@ -157,14 +222,6 @@ class AddRizzViewController: UIViewController {
                     assertionFailure("Error saving: \(error)")
                 }
         }
-        
-        // append this object ID into the rizzults array in teh database
-        
-        // after submit, reset page or
         resetFourm()
     }
-    
-    
-    
-
 }

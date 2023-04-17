@@ -372,7 +372,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-RJ-RFT">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="100.33333333333333" height="20.666666666666671"/>
+                                                    <rect key="frame" x="19.999999999999993" y="11.000000000000002" width="100.33333333333331" height="20.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-7O-IVt">
                                                             <rect key="frame" x="0.0" y="0.33333333333333393" width="20.333333333333332" height="20.333333333333329"/>
@@ -645,7 +645,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7y-VV-D5N" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="674"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="655"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="oMj-At-qnn">
                                                 <rect key="frame" x="16" y="16" width="361" height="84.333333333333329"/>
@@ -663,7 +663,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="questionChange1:" destination="kDc-IQ-ORw" eventType="valueChanged" id="1Jl-dL-FZA"/>
+                                                            <action selector="questionChange1:" destination="kDc-IQ-ORw" eventType="editingChanged" id="ju5-mX-iZv"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erI-6V-nRw" userLabel="error1">
@@ -690,7 +690,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="questionChange2:" destination="kDc-IQ-ORw" eventType="valueChanged" id="vUQ-0p-9qo"/>
+                                                            <action selector="questionChange2:" destination="kDc-IQ-ORw" eventType="editingChanged" id="l3D-ni-JLh"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23K-ye-w8C" userLabel="error2">
@@ -717,7 +717,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="questionChange3:" destination="kDc-IQ-ORw" eventType="valueChanged" id="82X-3V-yJj"/>
+                                                            <action selector="questionChange3:" destination="kDc-IQ-ORw" eventType="editingChanged" id="tJy-aR-8Sw"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtt-Gi-CkV" userLabel="error3">
@@ -744,7 +744,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="questionChange4:" destination="kDc-IQ-ORw" eventType="valueChanged" id="2PN-Uf-Fuh"/>
+                                                            <action selector="questionChange4:" destination="kDc-IQ-ORw" eventType="editingChanged" id="wmg-Xn-vqq"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KZ-c5-H8I" userLabel="error4">
@@ -771,7 +771,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="questionChange5:" destination="kDc-IQ-ORw" eventType="valueChanged" id="ASS-zy-4s6"/>
+                                                            <action selector="questionChange5:" destination="kDc-IQ-ORw" eventType="editingChanged" id="pBd-VD-bBm"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-9Q-zef" userLabel="error5">
@@ -783,7 +783,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ted-ho-oDP">
-                                                <rect key="frame" x="16" y="517.66666666666663" width="361" height="84.333333333333371"/>
+                                                <rect key="frame" x="16" y="517.66666666666663" width="361" height="60.333333333333371"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question6" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bht-ML-EQ8">
                                                         <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
@@ -797,25 +797,18 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <action selector="questionChange6:" destination="kDc-IQ-ORw" eventType="valueChanged" id="wUJ-8v-Y2E"/>
-                                                        </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VId-Ad-M5K" userLabel="error6">
-                                                        <rect key="frame" x="0.0" y="66.333333333333371" width="361" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" systemColor="systemRedColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-wa-gz8">
-                                                <rect key="frame" x="16" y="618" width="361" height="40"/>
+                                                <rect key="frame" x="16" y="594" width="361" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="QTz-5h-X2f"/>
+                                                    <constraint firstAttribute="height" constant="45" id="QTz-5h-X2f"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Submit"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Submit">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="onSubmit:" destination="kDc-IQ-ORw" eventType="touchUpInside" id="EnH-wn-IzK"/>
                                                 </connections>
@@ -875,7 +868,6 @@
                         <outlet property="error3" destination="Gtt-Gi-CkV" id="oEK-nh-72Q"/>
                         <outlet property="error4" destination="3KZ-c5-H8I" id="2kl-2I-2OO"/>
                         <outlet property="error5" destination="fZh-9Q-zef" id="8Uf-MO-JT1"/>
-                        <outlet property="error6" destination="VId-Ad-M5K" id="4vA-pu-cUJ"/>
                         <outlet property="question1" destination="aFP-nL-6kD" id="JDh-RS-YB5"/>
                         <outlet property="question1Field" destination="SX7-9c-yeM" id="6LM-Ta-JhV"/>
                         <outlet property="question2" destination="7JV-Ll-4Jo" id="91u-eM-N7e"/>
@@ -888,6 +880,7 @@
                         <outlet property="question5Field" destination="XKh-FQ-qaH" id="dp1-IP-TCj"/>
                         <outlet property="question6" destination="Bht-ML-EQ8" id="8ZT-8m-ScP"/>
                         <outlet property="question6Field" destination="MiF-Xn-qh2" id="Aww-6k-aTJ"/>
+                        <outlet property="submitButton" destination="rxb-wa-gz8" id="fpu-IW-JgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQt-BF-qxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
