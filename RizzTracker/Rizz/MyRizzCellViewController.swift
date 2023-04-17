@@ -46,6 +46,7 @@ class MyRizzCellViewController: UIViewController {
                 let lName = user?.lastName ?? "-1"
                 
                 // TODO: Fix this and connect the labels to the main storyboard file
+                /*
                 lblIntro.text = String("Hello \(fName)! Here are Your All Time Rizz Stats:")
                 
                 let attractionPreferences = user?.attractionPreference ?? "-1"
@@ -76,7 +77,7 @@ class MyRizzCellViewController: UIViewController {
                 lblPhoneNum.text = user!.phoneNumber ?? ""
                 lblPronouns.text = user!.pronouns ?? ""
                 lblPref.text = user!.attractionPreference ?? ""
-                
+                */
             } catch let error {
                 print("An error occurred: \(error)")
             }

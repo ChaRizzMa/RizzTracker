@@ -211,7 +211,12 @@ class HomeViewController: UIViewController {
                 let data = try await query.findAll()
                 DispatchQueue.main.async {
                     // Set the view controller's tracks property as this is the one the table view references
+                    
+                    // TODO: Sort the data by date created.
                     self.rizzults = data
+                    print(self.rizzults)
+                    self.rizzults = self.rizzults.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
+                    
                     //print(self?.Movies)
                     // Make the table view reload now that we have new data
                     self.tableView.reloadData()
@@ -267,7 +272,6 @@ extension HomeViewController: UITableViewDataSource {
             cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
         }
         
-        print("INDEX: ", index)
         return cell
     }
 }
