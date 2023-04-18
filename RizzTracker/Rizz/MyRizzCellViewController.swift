@@ -30,7 +30,9 @@ class MyRizzCellViewController: UIViewController {
     @IBOutlet weak var lblPronouns: UILabel!
     @IBOutlet weak var lblPref: UILabel!
     
+    let query = Rizzults.query()
     var user: PFUser?
+    var rizzult: [Rizzults] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,16 +40,44 @@ class MyRizzCellViewController: UIViewController {
         var pronoun2 = ""
         var pronoun3 = ""
         
+        //var sheBad, sheWant, toTalk, womanTalked, numGot: Int
+        
+        
         Task {
             do {
                 user = try await PFUser.current()
-                print("My Rizz: ✅", user)
+                print("My Rizz: ✅", user ?? "")
+                
+                fetchData()
+                print(rizzult)
+                
                 let fName = user?.firstName ?? "-1"
                 let lName = user?.lastName ?? "-1"
+                let object = user?.objectId
+                
+                var shebad = 0
+                var sheWant = 0
+                var toTalk = 0
+                var talkedTo = 0
+                var numGot = 0
+                var count = 0
+                
+                while rizzult == object{
+                    shebad += rizzult.badsQuantity ?? 0
+                    sheWant += rizzult.wantMeFrFRQuantity ?? 0
+                    toTalk += rizzult.goingToTalkToQuantity ?? 0
+                    talkedTo += rizzult.howManyTalkedTo ?? 0
+                    numGot += rizzult.numberComunications ?? 0
+                    count += 1
+                    print(count)
+                }
+                
+                let shebads = (shebad)/count
+                lblSheBad.text = String(shebad)
+              
                 
                 // TODO: Fix this and connect the labels to the main storyboard file
-                /*
-                lblIntro.text = String("Hello \(fName)! Here are Your All Time Rizz Stats:")
+                lblIntro.text = String("Hello \(fName) \(lName)! Here are Your All Time Rizz Stats:")
                 
                 let attractionPreferences = user?.attractionPreference ?? "-1"
                 
@@ -70,14 +100,14 @@ class MyRizzCellViewController: UIViewController {
                 lblProToTalk.text = "Going to talk to \(pronoun2.lowercased())'s"
                 lblProTalkedTo.text = "\(pronoun3) talked to"
                 
-                var initialRizz = NSString(format: "%.0f", user!.initialRizz ?? "")
+                let initialRizz = NSString(format: "%.0f", user!.currentRizz ?? "")
                 lblInitialRizz.text = String(initialRizz)
                 
                 lblEmail.text = user!.email ?? ""
                 lblPhoneNum.text = user!.phoneNumber ?? ""
                 lblPronouns.text = user!.pronouns ?? ""
                 lblPref.text = user!.attractionPreference ?? ""
-                */
+                
             } catch let error {
                 print("An error occurred: \(error)")
             }
@@ -86,6 +116,20 @@ class MyRizzCellViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func fetchData() {
+        Task {
+            do {
+                let data = try await query.findAll()
+                DispatchQueue.main.async {
+                    self.rizzult = data
+                    self.rizzult = self.rizzult.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
+                }
+            } catch let error {
+                print("Error: ❌", error)
+            }
+        }
     }
     
     
@@ -124,5 +168,5 @@ class MyRizzCellViewController: UIViewController {
          }
          */
         
-    }
+}
 
