@@ -1,0 +1,3 @@
+
+git rm --cached RizzTracker.xcodeproj/project.xcworkspace/xcuserdata/sayftanbir.xcuserdatad/UserInterfaceState.xcuserstate
+git commit -m "Removed file taht shouldnt be tracked"
