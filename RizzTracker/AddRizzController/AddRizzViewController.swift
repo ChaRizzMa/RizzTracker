@@ -191,8 +191,8 @@ class AddRizzViewController: UIViewController {
         let aTerm = a * 0.001
         let bTerm = b * 0.001
         let cTerm = c * 0.01
-        let dTerm = d * 0.15
-        let eTerm = e * 0.30
+        let dTerm = d * 0.05
+        let eTerm = e * 0.10
 
         var overall = (aTerm + bTerm + cTerm + dTerm + eTerm) * 100
 
