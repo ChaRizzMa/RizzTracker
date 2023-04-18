@@ -203,7 +203,7 @@ class AddRizzViewController: UIViewController {
         
         let newRizzult = Rizzults(
             owner: user?.username,
-            objectID: user?.objectId,
+            ownerUUID: user?.objectId,
             ownerRizz: Int(overall),
             badsQuantity: Int(question1Field.text ?? "0"),
             wantMeFrFRQuantity: Int(question2Field.text ?? "0"),

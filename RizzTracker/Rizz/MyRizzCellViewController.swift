@@ -43,41 +43,45 @@ class MyRizzCellViewController: UIViewController {
         
         //var sheBad, sheWant, toTalk, womanTalked, numGot: Int
         
-        
         Task {
             do {
                 user = try await PFUser.current()
+                print(user as Any)
                 print("My Rizz: ✅", user ?? "")
                 
-                fetchData()
+                let query = Rizzults.query("ownerUUID" == user?.objectId)
+                var rizzults: [Rizzults] = []
+                var damnBads = 0.0
+                var wantMefrfr = 0.0
+                var goingToTalk = 0.0
+                var talkedTo = 0.0
+                var numsGotten = 0.0
+                
+                let data = try await query.findAll()
+                DispatchQueue.main.async {
+                    rizzults = data
+                    rizzults = rizzults.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
+                }
+                print("Data Size: ", data.count)
+                
+                if (data.count >= 1) {
+                    for r in data {
+                        damnBads += Double(r.badsQuantity!)
+                        wantMefrfr += Double(r.wantMeFrFRQuantity!)
+                        goingToTalk += Double(r.goingToTalkToQuantity!)
+                        talkedTo += Double(r.howManyTalkedTo!)
+                        numsGotten += Double(r.numberComunications!)
+                    }
+                } else {
+                    // user has no rizzults
+                }
+                
                 print(self.rizzult)
                 
                 let fName = user?.firstName ?? "-1"
                 let lName = user?.lastName ?? "-1"
                 let object = user?.objectId
                 
-                var shebad = 0
-                var sheWant = 0
-                var toTalk = 0
-                var talkedTo = 0
-                var numGot = 0
-                var count = 0
-                
-                for Rizzult in rizzult where Rizzult.objectID == object{
-                    shebad += Rizzult.badsQuantity ?? 0
-                    sheWant += Rizzult.wantMeFrFRQuantity ?? 0
-                    toTalk += Rizzult.goingToTalkToQuantity ?? 0
-                    talkedTo += Rizzult.howManyTalkedTo ?? 0
-                    numGot += Rizzult.numberComunications ?? 0
-                    count += 1
-                    print(count)
-                }
-                
-                let shebads = shebad
-                lblSheBad.text = String(shebad)
-              
-                
-                // TODO: Fix this and connect the labels to the main storyboard file
                 lblIntro.text = String("Hello \(fName) \(lName)! Here are Your All Time Rizz Stats:")
                 
                 let attractionPreferences = user?.attractionPreference ?? "-1"
@@ -96,11 +100,22 @@ class MyRizzCellViewController: UIViewController {
                     pronoun3 = "People"
                 }
                 
+                // Number label assignments
+                lblOVR.text = String(user?.currentRizz ?? -1)
+                lblSheBad.text = String(format: "%.1f", damnBads/Double(data.count))
+                lblSheWant.text = String(format: "%.1f",wantMefrfr/Double(data.count))
+                lblToTalk.text = String(format: "%.1f",goingToTalk/Double(data.count))
+                lblWomanTalked.text = String(format: "%.1f",talkedTo/Double(data.count))
+                lblNumGot.text = String(format: "%.1f",numsGotten/Double(data.count))
+                
+                // Pronoun assignments
                 lblProDamnBad.text = "Damn \(pronoun1.lowercased()) Bad's"
                 lblProSheWant.text = "\(pronoun1) Want me fr fr's"
                 lblProToTalk.text = "Going to talk to \(pronoun2.lowercased())'s"
                 lblProTalkedTo.text = "\(pronoun3) talked to"
                 
+                // Other Stats
+                lblSubmittedRizz.text = String(data.count)
                 let initialRizz = NSString(format: "%.0f", user!.currentRizz ?? "")
                 lblInitialRizz.text = String(initialRizz)
                 
@@ -112,25 +127,13 @@ class MyRizzCellViewController: UIViewController {
             } catch let error {
                 print("An error occurred: \(error)")
             }
-            
-            
         }
-
         // Do any additional setup after loading the view.
     }
     
     private func fetchData() {
         Task {
-            do {
-                let query = Rizzults.query()
-                //let data = try await query.where(QueryConstraint)
-                DispatchQueue.main.async {
-                    self.rizzult = data
-                    self.rizzult = self.rizzult.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
-                }
-            } catch let error {
-                print("Error: ❌", error)
-            }
+            
         }
     }
     

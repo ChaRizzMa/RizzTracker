@@ -6,7 +6,7 @@ import ParseSwift
 
 Task {
     do {
-        let _ = try await ParseSwift.initialize(applicationId: "44bcjRdXDoe3AthZFEt0yjbrmPQaQYhNn6mmnlSH", clientKey: "oBLtzonFzT0QUmD5rR4BnMcFKFHNlJgw94TG8uVB", serverURL: URL(string: "https://parseapi.back4app.com")!)
+        let _ = try await ParseSwift.initialize(applicationId: "hdpLpS4REN8HrhG3MU15508CrEfE1pUKZyM97nwL", clientKey: "FPvX5tKdKwcc4VdlRaQdDu4Nf5jvW2fFBbVF6ALb", serverURL: URL(string: "https://parseapi.back4app.com")!)
     } catch let error {
         print(error)
     }
@@ -19,7 +19,7 @@ var password = "password"
 
 var usersArray: [PFUser] = []
 
-for _ in 1...20 {
+for _ in 1...10 {
     var firstName = faker.name.firstName()
     var lastName = faker.name.lastName()
     
@@ -48,20 +48,19 @@ for _ in 1...20 {
     }
     
     var newUser = PFUser(username: username, email: emailAddress, password: password, firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, currentRizz: currentRizz, friendsList: friendsList, pronouns: pronouns, attractionPreference: allAttractionPreferences[Int.random(in: 0...allAttractionPreferences.count-1)], initialRizz: Float(initialRizz), selfConfidence: Float(selfPerception))
-    
-    //print(newUser)
-    
-    newUser.signup { result in
 
-        switch result {
-        case .success(let user):
-            print("✅ Successfully signed up user \(user.username)")
-        case .failure(let error):
-            // Failed sign up
-            print("ERROR!", error.message)
-            print(newUser)
-        }
-    }
+    
+//    newUser.signup { result in
+//
+//        switch result {
+//        case .success(let user):
+//            print("✅ Successfully signed up user \(user.username)")
+//        case .failure(let error):
+//            // Failed sign up
+//            print("ERROR!", error.message)
+//            print(newUser)
+//        }
+//    }
     print(newUser)
     usersArray.append(newUser)
 }
@@ -72,7 +71,7 @@ for user in usersArray {
         
         var newRizzult = Rizzults(
             owner: user.username,
-            objectID: user.objectId,
+            ownerUUID: user.objectId,
             ownerRizz: Int(user.currentRizz ?? -1),
             badsQuantity: Int.random(in: 5...25),
             wantMeFrFRQuantity: Int.random(in: 5...25),
@@ -82,17 +81,18 @@ for user in usersArray {
             descriptionOfSituation: "Fake Data only for test"
         )
         
-        
-        newRizzult.save {
-            result in
-                switch result {
-                case .success(_):
-                    print("✅ Parse Object SAVED!")
-                    usleep(200000)
-                case .failure(let error):
-                    assertionFailure("Error saving: \(error)")
-                }
-        }
+        print(newRizzult.owner ?? "-1")
+
+//        newRizzult.save {
+//            result in
+//                switch result {
+//                case .success(_):
+//                    print("✅ Parse Object SAVED!")
+//                    usleep(200000)
+//                case .failure(let error):
+//                    assertionFailure("Error saving: \(error)")
+//                }
+//        }
     }
     
 }

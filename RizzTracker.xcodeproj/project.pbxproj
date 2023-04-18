@@ -38,6 +38,7 @@
 		ACCD954029E22B360067980D /* GenerateUsers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenerateUsers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACCD954429E237100067980D /* Rizzsults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rizzsults.swift; sourceTree = "<group>"; };
 		ACCD954929E35F120067980D /* AddRizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRizzViewController.swift; sourceTree = "<group>"; };
+		ACCD954C29EF347A0067980D /* TestQueries.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestQueries.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACD0113D29BA41E100025FA9 /* PFUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFUser.swift; sourceTree = "<group>"; };
 		ACD0114629BF7C0000025FA9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACD0114829BF983E00025FA9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		ACFC5AB129B7F3E100E38E48 = {
 			isa = PBXGroup;
 			children = (
+				ACCD954C29EF347A0067980D /* TestQueries.playground */,
 				ACCD954029E22B360067980D /* GenerateUsers.playground */,
 				ACFC5ABC29B7F3E100E38E48 /* RizzTracker */,
 				ACFC5ABB29B7F3E100E38E48 /* Products */,

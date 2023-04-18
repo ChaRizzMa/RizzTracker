@@ -19,7 +19,7 @@ struct Rizzults: ParseObject {
     
     // report metadata
     var owner: String? // username
-    var objectID: String? // owner uuid
+    var ownerUUID: String? // owner uuid
     var ownerRizz: Int? // the current rizz of the owner of the report
     
     // What we will see in report
