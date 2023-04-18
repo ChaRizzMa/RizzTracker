@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 class MyRizzCellViewController: UIViewController {
     
@@ -49,7 +50,7 @@ class MyRizzCellViewController: UIViewController {
                 print("My Rizz: ✅", user ?? "")
                 
                 fetchData()
-                print(rizzult)
+                print(self.rizzult)
                 
                 let fName = user?.firstName ?? "-1"
                 let lName = user?.lastName ?? "-1"
@@ -62,17 +63,17 @@ class MyRizzCellViewController: UIViewController {
                 var numGot = 0
                 var count = 0
                 
-                while rizzult == object{
-                    shebad += rizzult.badsQuantity ?? 0
-                    sheWant += rizzult.wantMeFrFRQuantity ?? 0
-                    toTalk += rizzult.goingToTalkToQuantity ?? 0
-                    talkedTo += rizzult.howManyTalkedTo ?? 0
-                    numGot += rizzult.numberComunications ?? 0
+                for Rizzult in rizzult where Rizzult.objectID == object{
+                    shebad += Rizzult.badsQuantity ?? 0
+                    sheWant += Rizzult.wantMeFrFRQuantity ?? 0
+                    toTalk += Rizzult.goingToTalkToQuantity ?? 0
+                    talkedTo += Rizzult.howManyTalkedTo ?? 0
+                    numGot += Rizzult.numberComunications ?? 0
                     count += 1
                     print(count)
                 }
                 
-                let shebads = (shebad)/count
+                let shebads = shebad
                 lblSheBad.text = String(shebad)
               
                 
@@ -121,7 +122,8 @@ class MyRizzCellViewController: UIViewController {
     private func fetchData() {
         Task {
             do {
-                let data = try await query.findAll()
+                let query = Rizzults.query()
+                //let data = try await query.where(QueryConstraint)
                 DispatchQueue.main.async {
                     self.rizzult = data
                     self.rizzult = self.rizzult.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
