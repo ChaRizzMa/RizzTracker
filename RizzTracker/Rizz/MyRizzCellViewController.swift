@@ -120,7 +120,7 @@ class MyRizzCellViewController: UIViewController {
                 
                 // Other Stats
                 lblSubmittedRizz.text = String(data.count)
-                let initialRizz = NSString(format: "%.0f", user!.currentRizz ?? "")
+                let initialRizz = NSString(format: "%.0f", user!.initialRizz ?? "")
                 lblInitialRizz.text = String(initialRizz)
                 
                 lblEmail.text = user!.email ?? ""
