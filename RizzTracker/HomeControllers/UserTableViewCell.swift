@@ -11,11 +11,11 @@ class UserTableViewCell: UITableViewCell {
     
     @IBOutlet weak var overallNameLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    var ownerOverall: Int = -1
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         // fetch user data
     }
 
