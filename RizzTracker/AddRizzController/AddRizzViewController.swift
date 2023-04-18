@@ -213,11 +213,22 @@ class AddRizzViewController: UIViewController {
             descriptionOfSituation: question6Field.text ?? "Null"
         )
         
+        
         newRizzult.save {
             result in
                 switch result {
                 case .success(_):
                     print("✅ Parse Object SAVED!")
+                case .failure(let error):
+                    assertionFailure("Error saving: \(error)")
+                }
+        }
+        user?.currentRizz = Float(overall)
+        user?.save {
+            result in
+                switch result {
+                case .success(_):
+                    print("✅ User Rizz updated")
                 case .failure(let error):
                     assertionFailure("Error saving: \(error)")
                 }
