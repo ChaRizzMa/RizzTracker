@@ -2,9 +2,8 @@
 //  HomeViewController.swift
 //  RizzTracker
 //
-//  Created by User on 4/7/23.
+//  Created by Daniel Ruiz on 4/18/23.
 //
-
 import UIKit
 import ParseSwift
 
@@ -16,35 +15,50 @@ class HomeViewController: UIViewController {
     
     var overalls: [String] = []
     
+    let refreshControl = UIRefreshControl()
+    
+    var isRefreshing = false // Track if refresh is in progress
+    let refreshInterval: TimeInterval = 5 // Refresh interval in seconds
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         
-        // TODO: figure out all the data fetching
-        Task {
-            do {
-                // todo add fetch loading
-                print("Query starting ✅")
-                let data = try await query.findAll()
-                DispatchQueue.main.async {
-                    // Set the view controller's tracks property as this is the one the table view references
-                    
-                    // TODO: Sort the data by date created.
-                    self.rizzults = data
-                    self.rizzults = self.rizzults.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
-                    
-                    // Make the table view reload now that we have new data
-                    self.tableView.reloadData()
-                }
-                print("Successfully Fetched ✅")
-            } catch let error {
-                print("Error: ❌", error)
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
+        fetchData()
+    }
+    
+    @objc private func refreshData() {
+        if !isRefreshing {
+            isRefreshing = true
+            fetchData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + refreshInterval) {
+                self.isRefreshing = false
             }
         }
     }
     
+    private func fetchData() {
+        Task {
+            do {
+                let data = try await query.findAll()
+                DispatchQueue.main.async {
+                    self.rizzults = data
+                    self.rizzults = self.rizzults.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                }
+            } catch let error {
+                print("Error: ❌", error)
+                self.refreshControl.endRefreshing()
+            }
+        }
+    }
 }
+
 extension HomeViewController: UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,7 +80,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! UserTableViewCell
-        var index = indexPath.item
+        let index = indexPath.item
         
         cell.ownerOverall = rizzults[index].ownerRizz ?? -1
         cell.overallNameLabel.text = String(rizzults[index].ownerRizz ?? -1) + " OVR"
@@ -82,6 +96,8 @@ extension HomeViewController: UITableViewDataSource {
         } else if case 71...80 = ownerOverall {
             cell.overallNameLabel.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
             cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+       
+
         } else if case 81...100 = ownerOverall {
             cell.overallNameLabel.textColor = UIColor(red: 0/255, green: 204/255, blue: 0/255, alpha: 1)
             cell.overallNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
@@ -89,4 +105,3 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
 }
-
