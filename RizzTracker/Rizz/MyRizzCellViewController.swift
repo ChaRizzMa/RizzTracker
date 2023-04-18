@@ -65,9 +65,9 @@ class MyRizzCellViewController: UIViewController {
                     pronoun3 = "People"
                 }
                 
-                lblProDamnBad.text = "Damn \(pronoun1) Bad's"
+                lblProDamnBad.text = "Damn \(pronoun1.lowercased()) Bad's"
                 lblProSheWant.text = "\(pronoun1) Want me fr fr's"
-                lblProToTalk.text = "Going to talk to \(pronoun2)'s"
+                lblProToTalk.text = "Going to talk to \(pronoun2.lowercased())'s"
                 lblProTalkedTo.text = "\(pronoun3) talked to"
                 
                 var initialRizz = NSString(format: "%.0f", user!.initialRizz ?? "")
