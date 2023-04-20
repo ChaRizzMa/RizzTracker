@@ -71,12 +71,21 @@ Tracks the users rizz and puts it into a social media like feed. The app has the
 
 ### [BONUS] Digital Wireframes & Mockups
 
-**Login and Create Account Screens
+Login and Create Account Screens
 
 <img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/Login%20and%20Create%20Account%20Figma.png" width=600>
 
+Rizzults Screens
 
-### [BONUS] Interactive Prototype
+<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/Rizzults%20Figma.png" width=600>
+
+Add Rizz Screen
+
+<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/Add%20Rizz%20Figma.png" width=600>
+
+My Rizz Screen
+
+<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/My%20Rizz%20Figma.png" width=600>
 
 ## Schema
 
