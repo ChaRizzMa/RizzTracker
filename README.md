@@ -79,3 +79,25 @@ Tracks the users rizz and puts it into a social media like feed. The app has the
 
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+Create Account Flow
+
+![gif walkthrough](https://github.com/ChaRizzMa/RizzTracker/blob/main/Create%20Account%20Flow.gif)
+
+Login Flow
+
+![gif walkthrough](https://github.com/ChaRizzMa/RizzTracker/blob/main/Login%20Flow.gif)
+
+Add Rizz Flow
+
+![gif walkthrough](https://github.com/ChaRizzMa/RizzTracker/blob/main/Add%20Rizz.gif)
+
+My Rizz Flow
+
+![gif walkthrough](https://github.com/ChaRizzMa/RizzTracker/blob/main/My%20Rizz.gif)
+
+
