@@ -75,7 +75,7 @@ Tracks the users rizz and puts it into a social media like feed. The app has the
 
 ### Models
 
-- [PFUser Model
+- PFUser Model
 This model was created to utilize features from ParseSwift
 
 | Property             | Type     | Description                                                               |
@@ -101,8 +101,19 @@ This model was created to utilize features from ParseSwift
 | selfConfidence       | Float    | Float for self confidence selected when creating account                  |
 | rizzReports          | String   | String for rizz reports                                                   |
 
+- Rizzults Model
 
-
+| Property               | Type   | Description                                |
+|------------------------|--------|--------------------------------------------|
+| owner                  | String | String of username                         |
+| ownerUUID              | String | String of owner ID                         |
+| ownerRizz              | Int    | Current rizz of the owner of the report    |
+| badsQuantity           | Int    | Int of "damn he/she/them bad"              |
+| wantMeFrFRQuantity     | Int    | Int of "of he/she/them want me frfr"       |
+| goingToTalkToQuantity  | Int    | Int of "I'm going to talk to him/her/them" |
+| howManyTalkedTo        | Int    | Int of how many people spoken to           |
+| numberCommunications   | Int    | Int of numbers gotten                      |
+| descriptionOfSituation | String | String description of the situation        |
 
 ### Networking
 
