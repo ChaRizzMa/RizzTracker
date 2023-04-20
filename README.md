@@ -75,6 +75,35 @@ Tracks the users rizz and puts it into a social media like feed. The app has the
 
 ### Models
 
+- [PFUser Model
+This model was created to utilize features from ParseSwift
+
+| Property             | Type     | Description                                                               |
+|----------------------|----------|---------------------------------------------------------------------------|
+| authData             | String   | String for authentication data for parse swift user                       |
+| originalData         | Data     | Data for when user is created                                             |
+| objectId             | String   | String for id of user                                                     |
+| createdAt            | Date     | Date for when user is created at                                          |
+| updatedAt            | Date     | Date for when user is updated at                                          |
+| ACL                  | ParseACL | used to control which users can access or modify a particular ParseObject |
+| username             | String   | String for user's username                                                |
+| email                | String   | String for user's email                                                   |
+| emailVerified        | Bool     | Boolean to check if email has been used before                            |
+| password             | String   | String for user's password                                                |
+| firstName            | String   | String for user's first name                                              |
+| lastName             | String   | String for user's last name                                               |
+| phoneNumber          | String   | String for user's phone number                                            |
+| currentRizz          | Float    | Float for user's current rizz                                             |
+| friendsList          | String   | String to represent friend's list                                         |
+| pronouns             | String   | String for user's pronouns                                                |
+| attractionPreference | String   | String for user's attraction preference (pronouns)                        |
+| initialRizz          | Float    | Float for initial rizz selected when creating account                     |
+| selfConfidence       | Float    | Float for self confidence selected when creating account                  |
+| rizzReports          | String   | String for rizz reports                                                   |
+
+
+
+
 ### Networking
 
 - [Add list of network requests by screen ]
