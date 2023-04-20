@@ -76,10 +76,10 @@ Tracks the users rizz and puts it into a social media like feed. The app has the
 ### Models
 
 - PFUser Model
-This model was created to utilize features from ParseSwift
+  This model was created to utilize features from ParseSwift
 
 | Property             | Type     | Description                                                               |
-|----------------------|----------|---------------------------------------------------------------------------|
+| -------------------- | -------- | ------------------------------------------------------------------------- |
 | authData             | String   | String for authentication data for parse swift user                       |
 | originalData         | Data     | Data for when user is created                                             |
 | objectId             | String   | String for id of user                                                     |
@@ -104,7 +104,7 @@ This model was created to utilize features from ParseSwift
 - Rizzults Model
 
 | Property               | Type   | Description                                |
-|------------------------|--------|--------------------------------------------|
+| ---------------------- | ------ | ------------------------------------------ |
 | owner                  | String | String of username                         |
 | ownerUUID              | String | String of owner ID                         |
 | ownerRizz              | Int    | Current rizz of the owner of the report    |
@@ -117,8 +117,210 @@ This model was created to utilize features from ParseSwift
 
 ### Networking
 
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+#### Login/Signup Networking
+
+GET request to get the user information on log in button tap .
+
+```swift
+@IBAction func onLoginButtonTap(_ sender: Any) {
+        // if correct credentials login:
+        // performSegue(withIdentifier: "Homepage", sender: sender)
+        // else: perform error handling
+
+        guard let username = UsernameField.text,
+              let password = PasswordField.text,
+              !username.isEmpty,
+              !password.isEmpty else {
+
+            showMissingFieldsAlert()
+            return
+        }
+
+        // Log in the parse user
+        PFUser.login(username: username, password: password) { [weak self] result in
+
+            switch result {
+            case .success(let PFUser):
+                print("✅ Successfully logged in as user: \(String(describing: PFUser.username))")
+
+                // Post a notification that the user has successfully logged in.
+                NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
+
+            case .failure(let error):
+                self?.showAlert(description: error.localizedDescription)
+            }
+        }
+
+    }
+```
+
+POST request in order to sign up a new user into the database.
+
+```swift
+func createUser() {
+        var newUser = PFUser(username: username, email: email, password: password)
+        newUser.firstName = fn
+        newUser.lastName = ln
+        newUser.phoneNumber = pn
+        newUser.currentRizz = 0.0 // TODO: Change this to the formula
+        newUser.friendsList = []
+        newUser.pronouns = pronouns
+        newUser.attractionPreference = attractionpreference
+        newUser.initialRizz = selfRizz
+        newUser.selfConfidence = selfAttraction
+
+
+        newUser.signup { [weak self] result in
+
+            switch result {
+            case .success(let user):
+
+                print("✅ Successfully signed up user \(user)")
+
+                // Post a notification that the user has successfully signed up.
+                NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
+
+            case .failure(let error):
+                // Failed sign up
+                print(error.message)
+                self?.showAlert(description: error.message)
+            }
+        }
+
+    }
+```
+
+#### Homepage View Controller
+
+GET request to get all of the Rizzults from the Rizzults class in Back4App.
+
+```swift
+private func fetchData() {
+    Task {
+        do {
+            let data = try await query.findAll()
+            DispatchQueue.main.async {
+                self.rizzults = data
+                self.rizzults = self.rizzults.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+        } catch let error {
+            print("Error: ❌", error)
+            self.refreshControl.endRefreshing()
+        }
+    }
+}
+```
+
+#### Add Rizz View Controller
+
+POST request in order to create a new Rizzult in the database.
+
+```swift
+@IBAction func onSubmit(_ sender: Any) {
+
+    //Calc Rizz, idk what im doing LOL
+    let a =  Double(question1Field.text!)!
+    let b =  Double(question2Field.text!)!
+    let c =  Double(question3Field.text!)!
+    let d =  Double(question4Field.text!)!
+    let e =  Double(question5Field.text!)!
+
+    // Some math here
+
+    let newRizzult = Rizzults(
+        owner: user?.username,
+        ownerUUID: user?.objectId,
+        ownerRizz: Int(overall),
+        badsQuantity: Int(question1Field.text ?? "0"),
+        wantMeFrFRQuantity: Int(question2Field.text ?? "0"),
+        goingToTalkToQuantity: Int(question3Field.text ?? "0"),
+        howManyTalkedTo: Int(question4Field.text ?? "0"),
+        numberComunications: Int(question5Field.text ?? "0"),
+        descriptionOfSituation: question6Field.text ?? "Null"
+    )
+
+    newRizzult.save {
+        result in
+            switch result {
+            case .success(_):
+                print("✅ Parse Object SAVED!")
+            case .failure(let error):
+                assertionFailure("Error saving: \(error)")
+            }
+    }
+    user?.currentRizz = Float(overall)
+    user?.save {
+        result in
+            switch result {
+            case .success(_):
+                print("✅ User Rizz updated")
+            case .failure(let error):
+                assertionFailure("Error saving: \(error)")
+            }
+    }
+    resetFourm()
+}
+```
+
+PUT request to update user's overall rizz
+
+```swift
+user?.currentRizz = Float(overall)
+user?.save {
+    result in
+        switch result {
+        case .success(_):
+            print("✅ User Rizz updated")
+        case .failure(let error):
+            assertionFailure("Error saving: \(error)")
+    }
+}
+```
+
+#### My Rizz View Controller
+
+GET request in order to get the user's own rizzults.
+
+```swift
+private func getData() {
+    var pronoun1 = ""
+    var pronoun2 = ""
+    var pronoun3 = ""
+
+    //var sheBad, sheWant, toTalk, womanTalked, numGot: Int
+
+    Task {
+        do {
+            user = try await PFUser.current()
+            print(user as Any)
+            print("My Rizz: ✅", user ?? "")
+
+            let query = Rizzults.query("ownerUUID" == user?.objectId)
+            var rizzults: [Rizzults] = []
+            var damnBads = 0.0
+            var wantMefrfr = 0.0
+            var goingToTalk = 0.0
+            var talkedTo = 0.0
+            var numsGotten = 0.0
+
+            let data = try await query.findAll()
+            DispatchQueue.main.async {
+                rizzults = data
+                rizzults = rizzults.sorted(by: { $0.updatedAt ?? Date.distantPast > $1.updatedAt ?? Date.distantPast })
+            }
+
+            print("Data Size: ", data.count)
+
+            // Math and Label assignments
+        } catch let error {
+            print("An error occurred: \(error)")
+        }
+    }
+    // Do any additional setup after loading the view.
+}
+```
 
 ## Video Walkthrough
 
@@ -139,5 +341,3 @@ Add Rizz Flow
 My Rizz Flow
 
 ![gif walkthrough](https://github.com/ChaRizzMa/RizzTracker/blob/main/My%20Rizz.gif)
-
-
