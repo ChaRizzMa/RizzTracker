@@ -69,24 +69,6 @@ Tracks the users rizz and puts it into a social media like feed. The app has the
 
 <img src="https://github.com/VincentCarrancho/RizzTracker/blob/main/rizz%20low%20fidelity.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-Login and Create Account Screens
-
-<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/Login%20and%20Create%20Account%20Figma.png" width=600>
-
-Rizzults Screens
-
-<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/Rizzults%20Figma.png" width=600>
-
-Add Rizz Screen
-
-<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/Add%20Rizz%20Figma.png" width=600>
-
-My Rizz Screen
-
-<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/My%20Rizz%20Figma.jpeg" width=600>
-
 ## Schema
 
 [This section will be completed in Unit 9]
