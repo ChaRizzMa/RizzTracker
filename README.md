@@ -85,7 +85,7 @@ Add Rizz Screen
 
 My Rizz Screen
 
-<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/My%20Rizz%20Figma.png" width=600>
+<img src="https://github.com/ChaRizzMa/RizzTracker/blob/main/My%20Rizz%20Figma.jpeg" width=600>
 
 ## Schema
 
